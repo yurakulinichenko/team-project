@@ -5,5 +5,13 @@
   font-size: 12px;
   line-height: 255%;
   text-align: center;
-  color: #000000;  
-}
+  color: #000000; 
+  padding: 43px 58px 26px 65px;
+
+  @include device($tablet)
+  {font-size: 14px;
+    line-height: 216%;    
+    text-align: center;
+    letter-spacing: 0.04em; }   
+      
+  }
