@@ -93,12 +93,51 @@
       </ul>
     </div>
     <div class="hero__content">
-      <img class="content__fon" src="#" alt="milk" />
+      <picture>
+        <source
+          srcset="./images/heder-2.png 1x, ./images/heder-2@2x.png 2x"
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/heder-2-tablet.png    1x,
+            ./images/heder-2-tablet@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <img src="./images/heder-2.png" alt="milk" width="213" />
+      </picture>
+
       <p class="content__text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et
       </p>
-      <img class="content__img" src="#" alt="ice" />
+      <picture>
+        <source
+          srcset="./images/heder-3.png 1x, ./images/heder-3@2x.png 2x"
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/heder-3-tablet.png    1x,
+            ./images/heder-3-tablet@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/heder-3-mobile.png    1x,
+            ./images/heder-3-mobile@2x.png 2x
+          "
+          media="(min-width: 320px)"
+        />
+        <img
+          class="content__img"
+          src="./images/heder-3-mobile.png"
+          alt="ice"
+          width="236"
+        />
+      </picture>
     </div>
     <div class="hero__representative">
       <ul class="representative__list list">
@@ -113,7 +152,26 @@
           <span>food trucks</span>
         </li>
       </ul>
-      <img class="" src="#" alt="girl" />
+      <picture>
+        <source
+          srcset="./images/heder-1.png 1x, ./images/heder-1@2x.png 2x"
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/heder-1-tablet.png    1x,
+            ./images/heder-1-tablet@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <img
+          class="content__img"
+          src="./images/heder-1.png"
+          alt="ice"
+          width="304"
+        />
+        <img src="./images/heder-1.png" alt="milk" width="213" />
+      </picture>
     </div>
   </div>
 </section>
