@@ -1,17 +1,17 @@
+
 .customer__text {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 255%;
+  line-height: 1.7;
   text-align: center;
   color: #000000; 
   padding: 43px 58px 26px 65px;
 
   @include device($tablet)
   {font-size: 14px;
-    line-height: 216%;    
+    line-height: 1.74;    
     text-align: center;
-    letter-spacing: 0.04em; }   
-      
+    letter-spacing: 0.04em; }         
   }
