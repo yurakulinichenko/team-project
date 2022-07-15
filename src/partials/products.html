@@ -1,113 +1,83 @@
 <section class="products">
-  <p class="products-text">100% natural</p>
-  <h1 class="products-title">products</h1>
-  <ul class="products__list">
-    <li class="products__item">
-      <picture>
-        <source
-          srcset="./images/products-1.png 1x, 
-          ./images/products-1@2x.png 2x"
-          media="(min-width: 1200px)"
-        />
-        <source
-          srcset="
-            ./images/products-1-tablet.png    1x,
-            ./images/products-1-tablet@2x.png 2x"
-          media="(min-width: 768px)"
-        />
-        <source
-          srcset="
-            ./images/products-1-mobile.png    1x,
-            ./images/products-1-mobile@2x.png 2x"
-          media="(min-width: 320px)"
-        />
-        <img
-          class="products__img"
-          src="./images/products-1-mobile.png"
-          alt="ice cream"
-        />
-      </picture>
-      <div class="products-content">
-        <h2 class="products-content__title">ice cream</h2>
-        <p class="products-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et
-        </p>
-        <button class="products-content__btn" type="button">
-          <!-- <svg class="" width="26" height="26">
-                        <use href=""></use>
-                    </svg> -->
-        </button>
-      </div>
-    </li>
-    <li class="products__item">
-      <picture>
-        <source
-          srcset="./images/products-2.png 1x, 
-          ./images/products-2@2x.png 2x"
-          media="(min-width: 1200px)"
-        />
-        <source
-          srcset="
-            ./images/products-2-tablet.png    1x,
-            ./images/products-2-tablet@2x.png 2x"
-          media="(min-width: 768px)"
-        />
-        <source
-          srcset="
-            ./images/products-2-mobile.png    1x,
-            ./images/products-2-mobile@2x.png 2x"
-          media="(min-width: 320px)"
-        />
-        <img
-          class="products__img"
-          src="./images/products-2-mobile.png"
-          alt="ice coffee"
-        />
-      </picture>
-      <div class="products-content">
-        <h2 class="products-content__title">ice coffee</h2>
-        <p class="products-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et
-        </p>
-        <button class="products-content__btn" type="button">
-          <!-- <svg class="" width="26" height="26">
-                        <use href=""></use>
-                    </svg> -->
-        </button>
-      </div>
-    </li>
-    <li class="products__item">
-        <picture>
-            <source srcset="./images/products-3.png 1x, 
-                  ./images/products-3@2x.png 2x" 
-                  media="(min-width: 1200px)" />
-            <source srcset="
-                    ./images/products-3-tablet.png    1x,
-                    ./images/products-3-tablet@2x.png 2x" 
-                    media="(min-width: 768px)" />
-            <source srcset="
-                    ./images/products-3-mobile.png    1x,
-                    ./images/products-3-mobile@2x.png 2x" 
-                    media="(min-width: 320px)" />
-            <img class="products__img" 
-              src="./images/products-3-mobile.png" 
-             alt="milk shakes"
-            />
-        </picture>
-      <div class="products-content">
-        <h2 class="products-content__title">milk shakes</h2>
-        <p class="products-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et
-        </p>
-        <button class="products-content__btn" type="button">
-          <!-- <svg class="" width="26" height="26">
-                        <use href=""></use>
-                    </svg> -->
-        </button>
-      </div>
-    </li>
-  </ul>
+    <div class="container">
+        <p class="products__text">100% natural</p>
+        <h1 class="products__title">products</h1>
+        <ul class="products__list">
+            <li class="products__item">
+                <picture class="products__picture">
+                    <source srcset="./images/products-1.png 1x, 
+                  ./images/products-1@2x.png 2x" media="(min-width: 1200px)" />
+                    <source srcset="
+                    ./images/products-1-tablet.png    1x,
+                    ./images/products-1-tablet@2x.png 2x" media="(min-width: 768px)" />
+                    <source srcset="
+                    ./images/products-1-mobile.png    1x,
+                    ./images/products-1-mobile@2x.png 2x" media="(min-width: 320px)" />
+                    <img class="products__img" src="./images/products-1-mobile.png" alt="ice cream" />
+                </picture>
+                <div class="products-content">
+                    <h2 class="products-content__title">ice cream</h2>
+                    <p class="products-content__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et
+                    </p>
+                    <button class="products-content__btn" type="button">
+                        <!-- <svg class="" width="26" height="26">
+                                <use href=""></use>
+                            </svg> -->
+                    </button>
+                </div>
+            </li>
+            <li class="products__item">
+                <picture>
+                    <source srcset="./images/products-2.png 1x, 
+                  ./images/products-2@2x.png 2x" media="(min-width: 1200px)" />
+                    <source srcset="
+                    ./images/products-2-tablet.png    1x,
+                    ./images/products-2-tablet@2x.png 2x" media="(min-width: 768px)" />
+                    <source srcset="
+                    ./images/products-2-mobile.png    1x,
+                    ./images/products-2-mobile@2x.png 2x" media="(min-width: 320px)" />
+                    <img class="products__img" src="./images/products-2-mobile.png" alt="ice coffee" />
+                </picture>
+                <div class="products-content">
+                    <h2 class="products-content__title">ice coffee</h2>
+                    <p class="products-content__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et
+                    </p>
+                    <button class="products-content__btn" type="button">
+                        <!-- <svg class="" width="26" height="26">
+                                <use href=""></use>
+                            </svg> -->
+                    </button>
+                </div>
+            </li>
+            <li class="products__item">
+                <picture>
+                    <source srcset="./images/products-3.png 1x, 
+                          ./images/products-3@2x.png 2x" media="(min-width: 1200px)" />
+                    <source srcset="
+                            ./images/products-3-tablet.png    1x,
+                            ./images/products-3-tablet@2x.png 2x" media="(min-width: 768px)" />
+                    <source srcset="
+                            ./images/products-3-mobile.png    1x,
+                            ./images/products-3-mobile@2x.png 2x" media="(min-width: 320px)" />
+                    <img class="products__img" src="./images/products-3-mobile.png" alt="milk shakes" />
+                </picture>
+                <div class="products-content">
+                    <h2 class="products-content__title">milk shakes</h2>
+                    <p class="products-content__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et
+                    </p>
+                    <button class="products-content__btn" type="button">
+                        <!-- <svg class="" width="26" height="26">
+                                <use href=""></use>
+                            </svg> -->
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
 </section>
