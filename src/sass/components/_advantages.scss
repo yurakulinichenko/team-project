@@ -22,6 +22,7 @@
 
 .advantages__item {
   margin-bottom: 32px;
+  max-width: 230px;
   @media screen and (min-width: 768px) {
     margin-bottom: 0px;
     max-width: 180px;
@@ -32,7 +33,7 @@
 }
 
 .advantages__characteristic {
-  font-family: "Titan One";
+  font-family: 'Titan One';
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -54,10 +55,9 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     display: flex;
     height: 50px;
-    border: 1px solid red;
     margin-bottom: 20px;
     @media screen and (min-width: 768px) {
       margin-bottom: 36px;
@@ -68,18 +68,39 @@
   }
 
   &.adv-icecream::before {
-    width: 33px;
+    background-image: url(/src/images/advantages-1-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(/src/images/advantages-1-mobile@2x.png);
+    }
   }
   &.adv-apple::before {
-    width: 50px;
+    background-image: url(/src/images/advantages-2-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(/src/images/advantages-2-mobile@2x.png);
+    }
   }
   &.adv-heart::before {
-    width: 44px;
+    background-image: url(/src/images/advantages-3-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(/src/images/advantages-3-mobile@2x.png);
+    }
   }
 }
 
 .advantages__text {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
