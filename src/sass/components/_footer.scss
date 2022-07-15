@@ -1,0 +1,5 @@
+.footer {
+  @include device(768px, false) {
+    @include font-set(32px, false, false, false, red);
+  }
+}
