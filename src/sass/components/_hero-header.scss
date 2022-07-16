@@ -1,27 +1,97 @@
+// .container {
+//   @include device($mobile) {
+//     width: 320px;
+//   }
+//   @include device($tablet) {
+//     width: 768px;
+//   }
+//   @include device($desktop) {
+//     width: 1200px;
+//   }
+// }
 .header {
-  background-color: $section-background;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 
-  & .container {
-    padding-top: 8px;
+  &__container {
+    padding: 8px 20px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include device($tablet) {
+      padding: 32px;
+    }
+    @include device($desktop) {
+      padding: 37 16px;
+    }
   }
 
   &__btn {
     display: none;
+    @include device($tablet) {
+      margin-left: 32px;
+      display: block;
+
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: calc(21 / 16);
+      align-items: center;
+      text-align: center;
+      padding: 5px;
+
+      color: $accent-color;
+      height: 44px;
+      width: 159px;
+      background: #ffffff;
+      border-radius: 22px;
+      border: none;
+      cursor: pointer;
+      //   margin-bottom: 19px;
+      transition: background-color $transition-active;
+      &:hover,
+      &:focus {
+        background-color: $second-btn-color;
+      }
+      &-icon {
+        margin-left: 12px;
+      }
+    }
+    @include device($desktop) {
+      margin-left: auto;
+    }
   }
 }
-
-.nav__list {
-  display: none;
-}
-
-.btn--desk {
-  display: none;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__list {
+    display: none;
+    @include device($desktop) {
+      display: flex;
+      margin-left: 128px;
+    }
+  }
+  &__link {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(21 / 16);
+    color: #ffffff;
+    transition: color $transition-active;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
 }
 
 .mobile-open-btn,
@@ -36,20 +106,31 @@
 .mobile-close-btn {
   margin-bottom: 26px;
 }
+.mobile-open-btn {
+  @include device($desktop) {
+    display: none;
+  }
+}
 
 .mobile-menu {
   position: fixed;
   background-color: $menu-background;
   right: 0;
   top: 0;
-  width: 250px;
+  min-width: 250px;
   height: 100%;
   opacity: 1;
   filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
   transform: translateX(0);
   transition: transform $transition-active, opacity $transition-active,
     visibility $transition-active, filter $transition-active;
+  &.is-hidden {
+    transform: translateX(100%);
+  }
 
+  &__container {
+    padding: 20px;
+  }
   &__item {
     padding-left: 20px;
     border-bottom: 1px solid #e18298;
@@ -77,7 +158,7 @@
     }
   }
 
-  & .btn {
+  &__btn {
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -87,8 +168,8 @@
     padding: 10px;
 
     color: $accent-color;
-    height: 44px;
     width: 100%;
+    height: 44px;
     background: #ffffff;
     border-radius: 22px;
     border: none;
@@ -101,54 +182,77 @@
       background-color: $second-btn-color;
     }
 
-    &__icon {
-      margin-left: 27px;
+    &-icon {
+      margin-left: 16px;
     }
   }
-}
-
-.mob-menu.is-hidden {
-  transform: translateX(100%);
 }
 
 .curent {
   color: $accent-color;
 }
 
-.mobile-menu__container {
-  padding: 20px;
-}
-
 // -------------Hero-------------
 
 .hero {
   background-color: $section-background;
-  height: 444px;
+  height: 502px;
+  @include device($tablet) {
+    height: 416px;
+  }
+  @include device($desktop) {
+    height: 664px;
+  }
 
-  & .container {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 136px;
+  &__container {
+    padding: 20px;
+    @include device($tablet) {
+      padding: 32px;
+    }
+    @include device($desktop) {
+      padding: 16px;
+    }
   }
 
   &__title {
-    margin-right: 62px;
+    margin-top: 192px;
+    max-width: 218px;
     font-family: 'Titan One';
-    font-style: normal;
     font-weight: 400;
     font-size: 26px;
     line-height: 30px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     margin-bottom: 20px;
-
     color: #ffffff;
+    @include device($tablet) {
+      max-width: 162px;
+      margin-top: 102px;
+      font-size: 22px;
+      line-height: calc(25 / 22);
+    }
+    @include device($desktop) {
+      max-width: 277px;
+      font-size: 38px;
+      line-height: 44px;
+      letter-spacing: 0.04em;
+      margin-top: 147px;
+      margin-bottom: 24px;
+    }
 
     & span {
       font-size: 48px;
       line-height: 0.965;
       text-transform: uppercase;
       color: $accent-color;
+      @include device($tablet) {
+        font-size: 34px;
+        line-height: 0.905em;
+      }
+      @include device($desktop) {
+        font-size: 58px;
+        line-height: 0.905em;
+      }
     }
   }
 
@@ -156,23 +260,29 @@
     display: flex;
   }
 
-  & .btn {
+  &__btn {
     display: inline-block;
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(21 / 16);
+    font-weight: 400;
+    font-size: 8px;
+    line-height: calc(10 / 8);
     align-items: center;
     text-align: center;
-    padding-left: 14px;
-    padding-right: 14px;
+    // padding: 0 14px;
     color: $accent-color;
-    height: 44px;
-    background: #ffffff;
-    border-radius: 22px;
+    min-width: 62px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 20px;
     border: none;
     cursor: pointer;
     transition: background-color $transition-active;
+    @include device($desktop) {
+      font-size: 14px;
+      line-height: calc(18 / 14);
+      min-width: 107px;
+      height: 40px;
+    }
 
     &:hover,
     &:focus {
@@ -182,21 +292,68 @@
 
   &__item:first-child {
     margin-right: 8px;
+    @include device($desktop) {
+      margin-right: 12px;
+    }
 
-    & .btn {
+    & .hero__btn {
       transition: background-color $transition-active;
       background-color: $accent-color;
       color: #ffffff;
     }
   }
+  &__content {
+    display: none;
+    @include device($tablet) {
+      //   прописати стилі картинок
+    }
+    @include device($desktop) {
+      //   прописати стилі картинок
+    }
+  }
+  &__representative {
+    display: none;
+    @include device($tablet) {
+      //
+    }
+    @include device($desktop) {
+      //
+    }
+  }
 }
-
-.btn--first {
-  background-color: $accent-color;
+.content__text {
+  margin-top: 61px;
+  margin-left: 184px;
+  width: 114px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
   color: #ffffff;
 }
-
-.hero__content,
-.hero__representative {
-  display: none;
+.content__box {
+  left: 35px;
+  bottom: 75px;
+  position: absolute;
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-color: $accent-background;
+  @include device($tablet) {
+    bottom: 40px;
+    right: 185px;
+    position: absolute;
+    width: 335px;
+    height: 333px;
+    border-radius: 50%;
+    background-color: $accent-background;
+  }
+  @include device($desktop) {
+    bottom: 40px;
+    right: 185px;
+    position: absolute;
+    width: 335px;
+    height: 333px;
+    border-radius: 50%;
+    background-color: $accent-background;
+  }
 }
