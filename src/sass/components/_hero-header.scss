@@ -1,31 +1,19 @@
-// .container {
-//   @include device($mobile) {
-//     width: 320px;
-//   }
-//   @include device($tablet) {
-//     width: 768px;
-//   }
-//   @include device($desktop) {
-//     width: 1200px;
-//   }
-// }
 .header {
   position: absolute;
   width: 100%;
   z-index: 1;
+  padding-top: 8px;
+  @include device($tablet) {
+    padding-top: 32px;
+  }
+  @include device($desktop) {
+    padding-top: 37;
+  }
 
   &__container {
-    padding: 8px 20px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include device($tablet) {
-      padding: 32px;
-    }
-    @include device($desktop) {
-      padding: 37 16px;
-    }
   }
 
   &__btn {
@@ -44,7 +32,6 @@
       height: 44px;
       min-width: 159px;
       background-color: #ffffff;
-      color: w;
       border-radius: 22px;
       border: none;
       cursor: pointer;
