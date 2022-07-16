@@ -1,0 +1,1 @@
+{"mappings":"AAAAA,GAAE,WACAA,EAAE,aAAaC","sources":["src/script/slider.js"],"sourcesContent":["$(function () {\n  $('.customer').slick();\n});\n{\n  /* <script type=\"text/javascript\">\n$(document).ready(function(){\n  $('.customer').slick({\n    setting-name: setting-value\n  });\n});\n</script> */\n}\n"],"names":["$","slick"],"version":3,"file":"index.57fbc301.js.map"}
