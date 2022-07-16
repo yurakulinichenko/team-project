@@ -1,35 +1,38 @@
 <section class="about">
     <div class="container">
-      <h2 class="about__pretitle">tradition and love</h2>
+      <h3 class="about__pretitle">tradition and love</h3>
       <h1 class="about__title">how it’s made?</h1>
      
+      <div class="about__box">
       <div class="about__image">
       <picture>
           <source
                 media="(min-width:1200px)"
-                srcset="../images/about.png, ../images/about@2x.png"
+                srcset="./images/about-pic_lg@1x.png, ./images/about-pic_lg@2x.png"
                 type="image/png"
               />
 
               <source
                 media="(min-width:768px)"
-                srcset="../images/about-tablet.png, ../images/about-tablet@2x.png"
+                srcset="./images/about-pic_md@1x.png, ./images/about-pic_md@2x.png"
                 type="image/png"
               />
 
               <source
                 media="(max-width:767px)"
-                srcset="../images/about-mobile.png, ../images/about-mobile@2x.png"
+                srcset="./images/about-pic_sm@1x.png, ./images/about-pic_sm@2x.png"
                 type="image/png"
               />
 
               <img
-                src="../images/about-mobile.png"
+                src="./images/about-pic_sm@1x.png"
                 alt="Cow"
               />
             
     </picture>
   </div>
+
+  <div class="text__box">
       <p class="about__text">
         Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
         cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
@@ -41,6 +44,8 @@
         suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
         tincidunt. Aliquam erat volutpat. Aenean accumsan.
       </p>
-      <btn class="about__button" type="submit">Read more</btn>
     </div>
+    </div>
+      <btn class="about__button" type="submit" data-modal-open>Read more</btn>
+    
   </section>
