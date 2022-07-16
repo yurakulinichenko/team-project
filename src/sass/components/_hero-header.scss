@@ -308,7 +308,7 @@
   &__content {
     display: none;
     @include device($tablet) {
-      //   прописати стилі картинок
+     display: flex;
     }
     @include device($desktop) {
       //   прописати стилі картинок
@@ -333,30 +333,71 @@
   line-height: 1.5;
   color: #ffffff;
 }
-.content__box {
-  left: 35px;
-  bottom: 75px;
-  position: absolute;
-  width: 346px;
-  height: 344px;
-  border-radius: 50%;
-  background-color: $accent-background;
-  @include device($tablet) {
-    bottom: 40px;
-    right: 185px;
+// .content__box {
+//   left: 35px;
+//   bottom: 75px;
+//   position: absolute;
+//   width: 346px;
+//   height: 344px;
+//   border-radius: 50%;
+//   background-color: $accent-background;
+//   @include device($tablet) {
+//     bottom: 40px;
+//     right: 185px;
+//     position: absolute;
+//     width: 335px;
+//     height: 333px;
+//     border-radius: 50%;
+//     background-color: $accent-background;
+//   }
+//   @include device($desktop) {
+//     bottom: 40px;
+//     right: 185px;
+//     position: absolute;
+//     width: 335px;
+//     height: 333px;
+//     border-radius: 50%;
+//     background-color: $accent-background;
+//   }
+// }
+.content__img {
     position: absolute;
-    width: 335px;
-    height: 333px;
-    border-radius: 50%;
-    background-color: $accent-background;
+    top: 92px;
+    right: 32px;
+    z-index: 2;
+  @include device($tablet){
+    width: 143px;
+    height: 336px;
+    top: 80px;
+    left: 332px;
   }
-  @include device($desktop) {
-    bottom: 40px;
-    right: 185px;
+  @include device($desktop){
+    width: 236px;
+    height: 557px;
+    top: 108px;
+    left: 596px;
+  }
+}
+.content__ellips {
+    display: inline;
     position: absolute;
+    width: 346px;
+    height: 344px;
+    right: -62px;
+    top: 83px;
+    z-index: 1;
+    border-radius: 50%;
+    background: $accent-background;
+  @include device($tablet) {
     width: 335px;
     height: 333px;
-    border-radius: 50%;
-    background-color: $accent-background;
+    top:43px;
+    left: 248px;
+    }
+  @include device($desktop) {
+    width: 534px;
+    height: 534px;
+    top: 54px;
+    left: 557px;
   }
 }
