@@ -1,0 +1,31 @@
+.gallery {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    max-width: 768px;
+    min-height: 196px;
+    background-image: linear-gradient(
+        to bottom,
+        #FFF5F6 30%,
+        #ffffff 30%
+        );
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+.grid__item {
+    margin-right: 3px;
+}
+
+.grid__item-right {
+    margin-right: 0;
+}
+
+.grid__item-top {
+    margin-bottom: 3px;
+}
+
