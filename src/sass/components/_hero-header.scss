@@ -67,7 +67,7 @@
   }
   &__link {
     display: block;
-    padding-top: 52px;
+    padding-top: 10px;
     padding-bottom: 10px;
     font-weight: 700;
     font-size: 16px;
@@ -189,6 +189,7 @@
 // -------------------Hero------------------
 
 .hero {
+  position: relative;
   background-color: $section-background;
   height: 502px;
   @include device($tablet) {
@@ -207,7 +208,10 @@
       padding: 16px;
     }
   }
-
+  // &__buner {
+  //   display: flex;
+  //   justify-content: center;
+  // }
   &__title {
     margin-top: 192px;
     max-width: 218px;
@@ -224,6 +228,7 @@
       margin-top: 102px;
       font-size: 22px;
       line-height: calc(25 / 22);
+      text-align: left;
     }
     @include device($desktop) {
       max-width: 277px;
@@ -301,13 +306,15 @@
   // &__content {
   //   display: none;
   //   @include device($tablet) {
-  //    display: block;
+ 
   //   }
   //   @include device($desktop) {
   //     //   прописати стилі картинок
   //   }
-  // }
+
   .representative__poit {
+    display: none;
+   @include device($desktop){
     display: block;
     position: absolute;
     width: 16px;
@@ -317,7 +324,7 @@
     left: 736px;
     top: 92px;
     background: #FFFFFF;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);}
 
   }
   .representative__item {
@@ -325,6 +332,8 @@
   @include device($tablet) {
     display: block;
     position: absolute;
+    right: 42px;
+    top: 94px;
     font-family: 'Titan One';
     font-style: normal;
     font-weight: 400;
@@ -376,6 +385,10 @@
 @include device($tablet) {
   display: block;
   position: absolute;
+  width: 152px;
+  height: 154px;
+  top: 246px;
+  left: 32px;
 
   }
   @include device($desktop) {
