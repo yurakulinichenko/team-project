@@ -1,12 +1,11 @@
 <header class="header">
   <div class="container header__container">
+    <a class="logo" href="./index.html">
+      <svg class="logo-icon" width="199" height="50">
+        <use href="./images/icons.svg#icon-logo"></use>
+      </svg>
+    </a>
     <nav class="nav">
-      <a class="logo" href="./index.html">
-        <svg class="logo-icon" width="199" height="50">
-          <use href="./images/icons.svg#icon-logo"></use>
-        </svg>
-      </a>
-
       <ul class="nav__list list">
         <li class="nav__item">
           <a class="nav__link link curent" href="#index.html">Home</a>
@@ -112,7 +111,13 @@
             "
             media="(min-width: 768px)"
           />
-          <img src="./images/heder-2.png" alt="milk" width="213" />
+          <img
+            class="content__img__milk"
+            src="./images/heder-2.png"
+            alt="milk"
+            width="213"
+            height="216"
+          />
         </picture>
         <p class="content__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -161,26 +166,23 @@
             media="(min-width: 768px)"
           />
           <img
-            class="content__img"
-            src="./images/heder-1.png"
+            class="content__img__girl"
+            src="./images/heder-1-tablet.png"
             alt="girl"
-            width="304"
+            width="190"
+            height="150"
           />
         </picture>
       </div>
     </div>
     <div class="hero__representative">
       <ul class="representative__list list">
-        <li class="representative__item">
-          16
-          <br />
-          <span>cafes</span>
-        </li>
-        <li class="representative__item">
-          23
-          <br />
-          <span>food trucks</span>
-        </li>
+        <div class="representative__poit"></div>
+        <li class="representative__item">16</li>
+        <p class="representative__text">cafes</p>
+        <div class="representative__poit"></div>
+        <li class="representative__item">23</li>
+        <p class="representative__text">food trucks</p>
       </ul>
     </div>
   </div>
