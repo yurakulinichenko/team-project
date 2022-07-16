@@ -14,5 +14,18 @@
 .grid {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: auto 0;
 }
+
+.grid__item {
+    margin-right: 3px;
+}
+
+.grid__item-right {
+    margin-right: 0;
+}
+
+.grid__item-top {
+    margin-bottom: 3px;
+}
+
