@@ -10,15 +10,15 @@
 //   $('.customer').slick();
 // });
 
-function initSlider() {
-  if ($.fn.slick) {
-    $('.customer').slick();
-  } else {
-    setTimeout(function () {
-      initSlider();
-    }, 500);
-  }
-}
+// function initSlider() {
+//   if ($.fn.slick) {
+//     $('.customer').slick();
+//   } else {
+//     setTimeout(function () {
+//       initSlider();
+//     }, 500);
+//   }
+// }
 
 // const a = () => {
 //   document.getElementsByClassName('customer').slick();
