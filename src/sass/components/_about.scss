@@ -18,7 +18,7 @@
          background-position-y: 90%;  
       }
 }
-.container {
+.about__container {
     padding-left: 20px;
     padding-right: 20px;
     margin-left: auto;
@@ -152,10 +152,12 @@
     @media screen and (min-width: 768px){
         font-size: 14px;  
         width: 334px;
+        margin-bottom: 40px;
     }
     @media screen and (min-width: 1200px) {
         font-size: 16px; 
         width: 463px; 
+        margin-bottom: 40px;
     }
 }
 .about__button{
@@ -172,4 +174,14 @@
     width: 176px;
     height: 44px;
     border-radius: 22px;
+    @media screen and (min-width: 768px){
+        font-size: 16px;  
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 16px; 
+    }
+}
+.icon__arrow{
+    margin-left: 13.62px;
+    fill:$accent-color;
 }
