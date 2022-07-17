@@ -17,11 +17,3 @@
   text-align: center;
   color: #000000;
 }
-
-.slider__items {
-  counter-reset: slide;
-}
-
-.slider__item {
-  counter-increment: slide;
-}
