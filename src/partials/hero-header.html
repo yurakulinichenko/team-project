@@ -1,12 +1,11 @@
 <header class="header">
-  <div class="container header__container">
+  <div class="header__container container">
+    <a class="logo" href="./index.html">
+      <svg class="logo-icon" width="199" height="50">
+        <use href="./images/icons.svg#icon-logo"></use>
+      </svg>
+    </a>
     <nav class="nav">
-      <a class="logo" href="./index.html">
-        <svg class="logo-icon" width="199" height="50">
-          <use href="./images/icons.svg#icon-logo"></use>
-        </svg>
-      </a>
-
       <ul class="nav__list list">
         <li class="nav__item">
           <a class="nav__link link curent" href="#index.html">Home</a>
@@ -82,8 +81,12 @@
 </header>
 <section class="hero">
   <div class="container hero__container">
-    <div class="hero__buner">
-      <h1 class="hero__title">ice cream made with <span>passion</span></h1>
+    <div class="hero__banner">
+      <h1 class="hero__title">
+        ice cream <br />
+        made with <br />
+        <span>passion</span>
+      </h1>
       <ul class="hero__list">
         <li class="hero__item">
           <button type="button" href="#products" class="hero__btn">
@@ -97,88 +100,101 @@
         </li>
       </ul>
     </div>
-
     <div class="hero__content">
-      <picture>
-        <source
-          srcset="./images/heder-2.png 1x, ./images/heder-2@2x.png 2x"
-          media="(min-width: 1200px)"
-        />
-        <source
-          srcset="
-            ./images/heder-2-tablet.png    1x,
-            ./images/heder-2-tablet@2x.png 2x
-          "
-          media="(min-width: 768px)"
-        />
-        <img src="./images/heder-2.png" alt="milk" width="213" />
-      </picture>
-
-      <p class="content__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et
-      </p>
-      <picture>
-        <source
-          srcset="./images/heder-3.png 1x, ./images/heder-3@2x.png 2x"
-          media="(min-width: 1200px)"
-        />
-        <source
-          srcset="
-            ./images/heder-3-tablet.png    1x,
-            ./images/heder-3-tablet@2x.png 2x
-          "
-          media="(min-width: 768px)"
-        />
-        <source
-          srcset="
-            ./images/heder-3-mobile.png    1x,
-            ./images/heder-3-mobile@2x.png 2x
-          "
-          media="(min-width: 320px)"
-        />
-        <img
-          class="content__img"
-          src="./images/heder-3-mobile.png"
-          alt="ice"
-          width="236"
-        />
-      </picture>
+      <div class="content__box">
+        <picture>
+          <source
+            srcset="./images/heder-2.png 1x, ./images/heder-2@2x.png 2x"
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/heder-2-tablet.png    1x,
+              ./images/heder-2-tablet@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            class="content__img__milk"
+            src="./images/heder-2.png"
+            alt="milk"
+            width="213"
+            height="216"
+          />
+        </picture>
+        <div>
+          <p class="content__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <a class="content__text-btn" href="/">
+            <svg class="text-btn_svg">
+              <use href="./images/icons.svg#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="hero__representative">
-      <ul class="representative__list list">
-        <li class="representative__item">
-          16
-          <br />
-          <span>cafes</span>
-        </li>
-        <li class="representative__item">
-          23
-          <br />
-          <span>food trucks</span>
-        </li>
-      </ul>
 
-      <picture>
-        <source
-          srcset="./images/heder-1.png 1x, ./images/heder-1@2x.png 2x"
-          media="(min-width: 1200px)"
-        />
-        <source
-          srcset="
-            ./images/heder-1-tablet.png    1x,
-            ./images/heder-1-tablet@2x.png 2x
-          "
-          media="(min-width: 768px)"
-        />
-        <img
-          class="content__img"
-          src="./images/heder-1.png"
-          alt="ice"
-          width="304"
-        />
-        <img src="./images/heder-1.png" alt="milk" width="213" />
-      </picture>
+    <div class="hero__representative">
+      <div class="content__fon">
+        <div class="content__ellips"></div>
+        <picture>
+          <source
+            srcset="./images/heder-3.png 1x, ./images/heder-3@2x.png 2x"
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/heder-3-tablet.png    1x,
+              ./images/heder-3-tablet@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/heder-3-mobile.png    1x,
+              ./images/heder-3-mobile@2x.png 2x
+            "
+            media="(min-width: 320px)"
+          />
+          <img
+            class="content__img"
+            src="./images/heder-3-mobile.png"
+            alt="ice"
+            width="170"
+            height="410"
+          />
+        </picture>
+        <picture>
+          <source
+            srcset="./images/heder-1.png 1x, ./images/heder-1@2x.png 2x"
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/heder-1-tablet.png    1x,
+              ./images/heder-1-tablet@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            class="content__img__girl"
+            src="./images/heder-1-tablet.png"
+            alt="girl"
+            width="190"
+            height="150"
+          />
+        </picture>
+      </div>
+      <ul class="representative__list list">
+        <div class="representative__poit"></div>
+        <li class="representative__item">16</li>
+        <p class="representative__text">cafes</p>
+        <div class="representative__poit"></div>
+        <li class="representative__item">23</li>
+        <p class="representative__text">food trucks</p>
+      </ul>
     </div>
   </div>
 </section>
