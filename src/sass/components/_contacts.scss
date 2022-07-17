@@ -2,7 +2,7 @@
   max-width: 1200px;
 }
 
-.btn {
+.contacts-btn {
   border: none;
   border-radius: 22px;
   background: #ffffff;
@@ -10,9 +10,7 @@
   @include font-set(16px, 700, 1.31, false, $accent-color);
   font-family: inherit;
   transition: $transition-active;
-}
 
-.contacts-btn {
   width: 161px;
   padding: 11px 15px;
   &:focus,
@@ -217,7 +215,7 @@
   }
 }
 
-.container {
+.container__contacts {
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
@@ -226,7 +224,7 @@
   justify-content: center;
 }
 
-.section {
+.section__contacts {
   padding: 30px 20px;
 
   @include device($tablet) {
@@ -236,9 +234,7 @@
   @include device($desktop) {
     padding: 60px 60px;
   }
-}
 
-.section__contacts {
   background: linear-gradient(#ffffff 23%, #fff5f6 23% 77%);
 
   @include device($tablet) {
