@@ -1,16 +1,16 @@
 // .container-hed{
 //   margin: 0 auto;
 //   padding: 0 20px;
-  
+
 //     @include device($mobile) {
 //       width: $mobile;
 //     }
-  
+
 //     @include device($tablet) {
 //       width: $tablet;
 //       padding: 0 32px;
 //     }
-  
+
 //     @include device($desktop) {
 //       width: $desktop;
 //       padding: 0 16px;
@@ -18,11 +18,12 @@
 // }
 .header__container {
   border: none;
-  @include device($tablet){
+  @include device($tablet) {
     border: none;
   }
   @include device($desktop) {
-    border: none;}
+    border: none;
+  }
 }
 .header {
   background-color: #ffb8ca;
@@ -288,22 +289,22 @@
   }
 
   &__btn {
-    display: inline-block;
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 8px;
-    line-height: calc(10 / 8);
-    align-items: center;
-    text-align: center;
-    padding: 0 10px;
-    color: $accent-color;
+    color: #d41443;
     min-width: 82px;
     height: 24px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    border: none;
     cursor: pointer;
-    transition: background-color $transition-active;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-family: inherit;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 1.25;
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+    text-decoration: none;
     @include device($desktop) {
       font-size: 14px;
       line-height: calc(18 / 14);
@@ -331,126 +332,126 @@
       margin-right: 12px;
     }
   }
-  
+
   .hero__representative {
     width: 0px;
     height: 0px;
   }
   .representative__poit {
     display: none;
-   @include device($desktop){
-    display: block;
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    z-index: 1;
-    border-radius: 50%;
-    left: 736px;
-    top: 92px;
-    background: #FFFFFF;
-    transform: matrix(-1, 0, 0, 1, 0, 0);}
-
+    @include device($desktop) {
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      z-index: 1;
+      border-radius: 50%;
+      left: 736px;
+      top: 92px;
+      background: #ffffff;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
   }
   .representative__item {
     display: none;
-  @include device($tablet) {
-    display: block;
-    position: absolute;
-    right: 42px;
-    top: 94px;
-    font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 1.14;
-    text-align: right;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $accent-color;
+    @include device($tablet) {
+      display: block;
+      position: absolute;
+      right: 42px;
+      top: 94px;
+      font-family: 'Titan One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 1.14;
+      text-align: right;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $accent-color;
     }
-  @include device($desktop) {
-    display: block;
-    font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 46px;
-    line-height: 1.15;
-    text-align: right;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $accent-color;
+    @include device($desktop) {
+      display: block;
+      font-family: 'Titan One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 46px;
+      line-height: 1.15;
+      text-align: right;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $accent-color;
     }
   }
 }
 .representative__text {
   display: none;
-  @include device($tablet){
-  display: block;
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 10px;
-  text-align: right;
-  color: #FFFFFF;}
+  @include device($tablet) {
+    display: block;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    text-align: right;
+    color: #ffffff;
+  }
 }
 .hero__banner {
   margin-bottom: 40px;
 }
 .content__text {
-@include device($tablet){
-  max-width: 114px;
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 1.5;
-  color: #ffffff;
-  margin-bottom: 7px;
-  margin-top: 60px;}
-@include device($desktop){
-  max-width: 200px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #ffffff;
-  margin-bottom: 20px;
-  margin-top: 60px;
-}
+  @include device($tablet) {
+    max-width: 114px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 7px;
+    margin-top: 60px;
+  }
+  @include device($desktop) {
+    max-width: 200px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 60px;
+  }
 }
 .content__text-btn {
   display: none;
-@include device($tablet) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  &:hover,
+  @include device($tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    &:hover,
     &:focus {
       background-color: $second-btn-color;
     }
- }
-@include device($desktop){
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  &:hover,
+  }
+  @include device($desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    &:hover,
     &:focus {
       background-color: $second-btn-color;
     }
-}
- 
+  }
 }
 .text-btn_svg {
   width: 10px;
   height: 10px;
   fill: $accent-color;
-
 }
 .content__box {
   display: flex;
@@ -458,31 +459,30 @@
 }
 .content__img__milk {
   display: none;
-@include device($tablet) {
-  display: block;
-  width: 152px;
-  height: 154px;
-
-}
+  @include device($tablet) {
+    display: block;
+    width: 152px;
+    height: 154px;
+  }
   @include device($desktop) {
-   display: block;
+    display: block;
     width: 213px;
     height: 216px;
   }
 }
 .content__img {
-    display: block;
-    position: absolute;
-    top: 92px;
-    right: 32px;
-    z-index: 2;
-  @include device($tablet){
+  display: block;
+  position: absolute;
+  top: 92px;
+  right: 32px;
+  z-index: 2;
+  @include device($tablet) {
     width: 143px;
     height: 336px;
     top: 80px;
     left: 332px;
   }
-  @include device($desktop){
+  @include device($desktop) {
     width: 236px;
     height: 557px;
     top: 108px;
@@ -490,8 +490,8 @@
   }
 }
 .content__img__girl {
-    display: none;
-  @include device($tablet){
+  display: none;
+  @include device($tablet) {
     display: block;
     position: absolute;
     visibility: visible;
@@ -499,7 +499,7 @@
     left: 546px;
     z-index: 5;
   }
-  @include device($desktop){
+  @include device($desktop) {
     width: 304px;
     height: 241px;
     top: 423px;
@@ -508,20 +508,20 @@
   }
 }
 .content__ellips {
-    position: absolute;
-    overflow: hidden;
-    min-width: 320px;
-    width: 346px;
-    height: 344px;
-    left: 36px;
-    top: 83px;
-    z-index: 1;
-    border-radius: 50%;
-    background: $accent-background;
+  position: absolute;
+  overflow: hidden;
+  min-width: 320px;
+  width: 346px;
+  height: 344px;
+  left: 36px;
+  top: 83px;
+  z-index: 1;
+  border-radius: 50%;
+  background: $accent-background;
   @include device($tablet) {
     width: 335px;
     height: 333px;
-    top:43px;
+    top: 43px;
     left: 248px;
   }
   @include device($desktop) {
