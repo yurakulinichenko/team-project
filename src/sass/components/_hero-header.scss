@@ -1,5 +1,31 @@
+// .container-hed{
+//   margin: 0 auto;
+//   padding: 0 20px;
+  
+//     @include device($mobile) {
+//       width: $mobile;
+//     }
+  
+//     @include device($tablet) {
+//       width: $tablet;
+//       padding: 0 32px;
+//     }
+  
+//     @include device($desktop) {
+//       width: $desktop;
+//       padding: 0 16px;
+//     }
+// }
+.header__container {
+  border: none;
+  @include device($tablet){
+    border: none;
+  }
+  @include device($desktop) {
+    border: none;}
+}
 .header {
-  position: absolute;
+  background-color: #ffb8ca;
   width: 100%;
   z-index: 1;
   padding-top: 8px;
@@ -58,6 +84,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
   &__list {
     display: none;
     @include device($desktop) {
@@ -108,6 +135,7 @@
   background-color: $menu-background;
   right: 0;
   top: 0;
+  z-index: 3;
   min-width: 250px;
   height: 100%;
   opacity: 1;
@@ -200,12 +228,12 @@
   }
 
   &__container {
-    padding: 20px;
+    padding: 0 20px;
     @include device($tablet) {
-      padding: 32px;
+      padding: 22px 32px 0 32px;
     }
     @include device($desktop) {
-      padding: 16px;
+      padding: 62px 16px 60px 16px;
     }
   }
   // &__buner {
@@ -213,7 +241,7 @@
   //   justify-content: center;
   // }
   &__title {
-    margin-top: 192px;
+    //margin-top: 192px;
     max-width: 218px;
     font-family: 'Titan One';
     font-weight: 400;
@@ -225,7 +253,7 @@
     color: #ffffff;
     @include device($tablet) {
       max-width: 162px;
-      margin-top: 102px;
+      //margin-top: 102px;
       font-size: 22px;
       line-height: calc(25 / 22);
       text-align: left;
@@ -235,7 +263,7 @@
       font-size: 38px;
       line-height: 44px;
       letter-spacing: 0.04em;
-      margin-top: 147px;
+      //margin-top: 147px;
       margin-bottom: 24px;
     }
 
@@ -303,15 +331,11 @@
       margin-right: 12px;
     }
   }
-  // &__content {
-  //   display: none;
-  //   @include device($tablet) {
- 
-  //   }
-  //   @include device($desktop) {
-  //     //   прописати стилі картинок
-  //   }
-
+  
+  .hero__representative {
+    width: 0px;
+    height: 0px;
+  }
   .representative__poit {
     display: none;
    @include device($desktop){
@@ -370,31 +394,80 @@
   text-align: right;
   color: #FFFFFF;}
 }
-
+.hero__banner {
+  margin-bottom: 40px;
+}
 .content__text {
-  margin-top: 61px;
-  margin-left: 184px;
-  width: 114px;
+@include device($tablet){
+  max-width: 114px;
   font-weight: 400;
   font-size: 8px;
   line-height: 1.5;
   color: #ffffff;
+  margin-bottom: 7px;
+  margin-top: 60px;}
+@include device($desktop){
+  max-width: 200px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+}
+.content__text-btn {
+  display: none;
+@include device($tablet) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  &:hover,
+    &:focus {
+      background-color: $second-btn-color;
+    }
+ }
+@include device($desktop){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  &:hover,
+    &:focus {
+      background-color: $second-btn-color;
+    }
+}
+ 
+}
+.text-btn_svg {
+  width: 10px;
+  height: 10px;
+  fill: $accent-color;
+
+}
+.content__box {
+  display: flex;
+  justify-content: flex-start;
 }
 .content__img__milk {
   display: none;
 @include device($tablet) {
   display: block;
-  position: absolute;
   width: 152px;
   height: 154px;
-  top: 246px;
-  left: 32px;
 
-  }
+}
   @include device($desktop) {
    display: block;
-   position: absolute;
-    
+    width: 213px;
+    height: 216px;
   }
 }
 .content__img {
@@ -454,7 +527,9 @@
   @include device($desktop) {
     width: 534px;
     height: 534px;
-    top: 54px;
-    left: 477px;
+    // top: 54px;
+    // left: 477px;
+    top: -37px;
+    left: 669px;
   }
 }
