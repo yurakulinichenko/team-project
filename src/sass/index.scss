@@ -1,6 +1,7 @@
-@import './base/common';
 @import './base/reset';
 @import './utils/varaibles';
+@import './utils/mixins';
+@import './base/common';
 @import './components/hero-header';
 @import './components/products';
 @import './components/about';
@@ -9,3 +10,5 @@
 @import './components/customer-review';
 @import './components/contacts';
 @import './components/footer';
+@import './components/modal_buy-now';
+@import './components/modal_buy-nowMob';

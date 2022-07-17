@@ -1,27 +1,76 @@
 .header {
-  background-color: $section-background;
-
-  & .container {
-    padding-top: 8px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 8px;
+    @include device($tablet) {
+      padding-top: 32px;
+    }
+    @include device($desktop) {
+      padding-top: 37;
+    }
   }
+
   &__btn {
     display: none;
+    @include device($tablet) {
+      margin-left: 32px;
+      display: block;
+      font-family: inherit;
+      @include font-set(16px, 700, 1.31, false, $accent-color);
+      align-items: center;
+      text-align: center;
+      padding: 5px;
+      height: 44px;
+      min-width: 159px;
+      background-color: $primary-white;
+      border-radius: 22px;
+      border: none;
+      cursor: pointer;
+      transition: background-color $transition-active;
+      &:hover,
+      &:focus {
+        background-color: $second-btn-color;
+      }
+      &-icon {
+        margin-left: 12px;
+      }
+    }
+    @include device($desktop) {
+      margin-left: auto;
+    }
   }
 }
-
-.nav__list {
-  display: none;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__list {
+    display: none;
+    @include device($desktop) {
+      display: flex;
+      margin-left: 128px;
+    }
+  }
+  &__link {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include font-set(16px, 700, 1.31, false, $primary-white);
+    transition: color $transition-active;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
 }
-.btn--desk {
-  display: none;
-}
-
 .mobile-open-btn,
 .mobile-close-btn {
   margin-left: auto;
@@ -30,22 +79,40 @@
   background-color: transparent;
   padding: 0;
 }
+
 .mobile-close-btn {
   margin-bottom: 26px;
 }
+.mobile-open-btn {
+  @include device($desktop) {
+    display: none;
+  }
+}
+
 .mobile-menu {
   position: fixed;
+  z-index: 1;
   background-color: $menu-background;
   right: 0;
   top: 0;
-  width: 250px;
+  min-width: 250px;
   height: 100%;
   opacity: 1;
   filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
   transform: translateX(0);
   transition: transform $transition-active, opacity $transition-active,
     visibility $transition-active, filter $transition-active;
+  @include device($tablet) {
+    min-width: 254px;
+  }
+  &.is-hidden {
+    transform: translateX(100%);
+  }
 
+  &__container {
+    padding: 20px;
+    text-align: center;
+  }
   &__item {
     padding-left: 20px;
     border-bottom: 1px solid #e18298;
@@ -57,12 +124,9 @@
       border-top: 1px solid #e18298;
     }
   }
-  &__link {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc(18 / 14);
 
-    color: #ffffff;
+  &__link {
+    @include font-set(14px, 700, 1.28, false, $primary-white);
     padding-top: 10px;
     padding-bottom: 10px;
     &:hover,
@@ -70,114 +134,341 @@
       color: $accent-color;
     }
   }
-  & .btn {
+
+  &__btn {
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(21 / 16);
+    @include font-set(16px, 700, 1.31, false, $accent-color);
     align-items: center;
     text-align: center;
     padding: 10px;
-
-    color: $accent-color;
+    min-width: 100%;
     height: 44px;
-    width: 100%;
-    background: #ffffff;
+    background-color: $primary-white;
     border-radius: 22px;
     border: none;
     cursor: pointer;
     margin-bottom: 19px;
     transition: background-color $transition-active;
+    @include device($tablet) {
+      min-width: 186px;
+    }
     &:hover,
     &:focus {
       background-color: $second-btn-color;
     }
-    &__icon {
-      margin-left: 27px;
+
+    &-icon {
+      margin-left: 16px;
     }
   }
 }
-.mob-menu.is-hidden {
-  transform: translateX(100%);
-}
-
 .curent {
   color: $accent-color;
 }
-.mobile-menu__container {
-  padding: 20px;
-}
 
-// -------------Hero-------------
+// -------------------Hero------------------
 
 .hero {
   background-color: $section-background;
-  height: 444px;
-  & .container {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 136px;
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+    height: 502px;
+    @include device($tablet) {
+      height: 416px;
+    }
+    @include device($desktop) {
+      height: 664px;
+    }
+  }
+  &__banner {
+    margin-top: 192px;
+    @include device($tablet) {
+      margin-top: 102px;
+    }
+    @include device($desktop) {
+      margin-top: 147px;
+    }
   }
   &__title {
-    margin-right: 62px;
+    max-width: 218px;
     font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 30px;
-    letter-spacing: 0.04em;
+    @include font-set(26px, 400, 1.15, 0.04em, $primary-white);
     text-transform: uppercase;
     margin-bottom: 20px;
+    @include device($tablet) {
+      max-width: 162px;
+      font-size: 22px;
+      line-height: 1.14;
+    }
+    @include device($desktop) {
+      max-width: 277px;
+      font-size: 38px;
+      line-height: 1.16;
+      margin-bottom: 24px;
+    }
 
-    color: #ffffff;
     & span {
       font-size: 48px;
       line-height: 0.965;
       text-transform: uppercase;
       color: $accent-color;
+      @include device($tablet) {
+        font-size: 34px;
+        line-height: 0.905em;
+      }
+      @include device($desktop) {
+        font-size: 58px;
+      }
     }
   }
+
   &__list {
     display: flex;
   }
 
-  & .btn {
+  &__btn {
     display: inline-block;
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(21 / 16);
+    @include font-set(8px, 400, 1.25, false, $accent-color);
     align-items: center;
     text-align: center;
-    padding-left: 14px;
-    padding-right: 14px;
-    color: $accent-color;
-    height: 44px;
-    background: #ffffff;
-    border-radius: 22px;
+    padding: 0 10px;
+    min-width: 82px;
+    height: 24px;
+    background-color: $primary-white;
+    border-radius: 20px;
     border: none;
     cursor: pointer;
     transition: background-color $transition-active;
+    @include device($desktop) {
+      font-size: 14px;
+      line-height: 1.28;
+      min-width: 138px;
+      height: 40px;
+    }
+    .hero__item:first-child & {
+      min-width: 62px;
+      transition: background-color $transition-active;
+      background-color: $accent-color;
+      color: $primary-white;
+      @include device($desktop) {
+        min-width: 107px;
+      }
+    }
     &:hover,
     &:focus {
       background-color: $second-btn-color;
     }
   }
+
   &__item:first-child {
     margin-right: 8px;
-    & .btn {
-      transition: background-color $transition-active;
-      background-color: $accent-color;
-      color: #ffffff;
+    @include device($desktop) {
+      margin-right: 12px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    @include device($desktop) {
+      margin-top: 40px;
+    }
+  }
+  &__representative {
+    margin-left: auto;
+    margin-top: 92px;
+    @include device($desktop) {
+      margin-top: 152px;
     }
   }
 }
 
-.btn--first {
-  background-color: $accent-color;
-  color: #ffffff;
-}
-.hero__content,
-.hero__representative {
+.representative {
   display: none;
+  @include device($tablet) {
+    display: block;
+    margin-right: 8px;
+  }
+  @include device($desktop) {
+    margin-right: 18px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    @include device($desktop) {
+      gap: 15px;
+    }
+  }
+  &__item {
+    position: relative;
+    z-index: 1;
+  }
+  &__poit {
+    position: absolute;
+    z-index: -1;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: -8px;
+    top: -1px;
+    background-color: $primary-white;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    @include device($desktop) {
+      display: block;
+      width: 30px;
+      height: 30px;
+      right: -18px;
+      top: -4px;
+    }
+  }
+  &__top-text {
+    font-family: 'Titan One';
+    @include font-set(28px, 400, 1.14, 0.04em, $accent-color);
+    text-align: right;
+    text-transform: uppercase;
+    @include device($desktop) {
+      display: block;
+      font-size: 46px;
+      line-height: 1.15;
+    }
+  }
+
+  &__text {
+    @include font-set(8px, 400, 1.25, false, $primary-white);
+    text-align: right;
+    @include device($desktop) {
+      font-size: 14px;
+      line-height: 1.28;
+    }
+  }
+}
+
+.content {
+  &__img-milk {
+    display: none;
+    @include device($tablet) {
+      display: block;
+      width: 152px;
+      height: 154px;
+    }
+    @include device($desktop) {
+      display: block;
+      width: 213px;
+      height: 216px;
+    }
+  }
+  &__wrap {
+    display: none;
+    @include device($tablet) {
+      display: block;
+    }
+  }
+  &__text {
+    max-width: 114px;
+    @include font-set(8px, 400, 1.5, false, $primary-white);
+    margin-bottom: 7px;
+
+    @include device($desktop) {
+      max-width: 200px;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  }
+  &__text-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $primary-white;
+    transition: background-color $transition-active;
+    &:hover,
+    &:focus {
+      background-color: $second-btn-color;
+    }
+    @include device($desktop) {
+      width: 26px;
+      height: 26px;
+    }
+  }
+  &__ellips {
+    position: absolute;
+    z-index: -1;
+    width: 346px;
+    height: 344px;
+    left: 36px;
+    top: 83px;
+    border-radius: 50%;
+    background-color: $accent-background;
+    @include device($tablet) {
+      width: 335px;
+      height: 333px;
+      top: 43px;
+      left: 248px;
+    }
+    @include device($desktop) {
+      width: 534px;
+      height: 534px;
+      top: 54px;
+      left: 517px;
+    }
+  }
+  &__img {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 171px;
+    height: 410px;
+    top: 92px;
+    left: 117px;
+    @include device($tablet) {
+      width: 143px;
+      height: 336px;
+      top: 80px;
+      left: 322px;
+    }
+    @include device($desktop) {
+      width: 236px;
+      height: 557px;
+      top: 108px;
+      left: 636px;
+    }
+  }
+  &__img-girl {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    visibility: visible;
+    width: 190px;
+    height: 150px;
+    top: 266px;
+    left: 546px;
+    @include device($tablet) {
+      display: block;
+    }
+    @include device($desktop) {
+      width: 304px;
+      height: 241px;
+      top: 423px;
+      left: 880px;
+    }
+  }
+}
+
+.text-btn_svg {
+  display: none;
+  fill: $accent-color;
+  @include device($tablet) {
+    display: block;
+  }
 }
