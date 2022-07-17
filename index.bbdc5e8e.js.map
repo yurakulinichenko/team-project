@@ -1,0 +1,1 @@
+{"mappings":"AAAA,IAAIA,EAAMC,OAAOC,aACjBF,EAAIG,UAAUC,OAAM,WAClBJ,EAAI,aAAaK","sources":["src/script/slider.js"],"sourcesContent":["var $jq = jQuery.noConflict();\n$jq(document).ready(function () {\n  $jq('.customer').slick();\n});\n"],"names":["$084ae1f4c8b8f022$var$$jq","jQuery","noConflict","document","ready","slick"],"version":3,"file":"index.bbdc5e8e.js.map"}
