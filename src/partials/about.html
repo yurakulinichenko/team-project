@@ -1,5 +1,5 @@
 <section class="about">
-    <div class="about__container">
+    <div class="container">
       <h3 class="about__pretitle">tradition and love</h3>
       <h2 class="about__title">how it’s made?</h2>
      
@@ -30,7 +30,7 @@
               />
             
     </picture>
-  </div>
+      </div>
 
   <div class="text__box">
       <p class="about__text">
@@ -46,11 +46,25 @@
       </p>
       <p class="about__paragraph"> Aliquam erat volutpat. Aenean accumsan.</p>
     
-      <btn class="about__button" type="submit" data-modal-open>Read more
+      <button class="about__button" type="button" data-modal-open>Read more
         <svg class="icon__arrow" width="4.43" height="8">
           <use href="../images/icons.svg#icon-arrow-right"></use>
         </svg>
-      </btn>
+      </button>
     </div>
-  </div>
+    </div>
+    </div>
+
+    <!--modal-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-button" data-modal-close>
+          <svg class="" width="11px" height="11px">
+            <use href="./images/symbol-defs.svg#icon-Vector"></use>
+          </svg>
+        </button>
+
+  
+      </div>
+    </div>
   </section>
