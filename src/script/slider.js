@@ -25,11 +25,12 @@
 // };
 // a();
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   // инициализация слайдера
-//   const slider = new SimpleAdaptiveSlider('.slider-items', {
-//     autoplay: false,
-//     interval: 5000,
-//     swipe: true,
-//   });
-// });
+document.addEventListener('DOMContentLoaded', () => {
+  // инициализация слайдера
+  new ItcSimpleSlider('.itcss', {
+    loop: true,
+    autoplay: false,
+    interval: 5000,
+    swipe: true,
+  });
+});
