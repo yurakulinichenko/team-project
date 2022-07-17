@@ -56,15 +56,12 @@
   }
 }
 
-.contacts {
-}
-
 .social {
   display: flex;
   justify-content: flex-end;
 }
 
-.contacts__social {
+.footer__social {
   margin-bottom: 40px;
 
   @include device($tablet) {
@@ -89,7 +86,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: $fiil-icons;
+  background-color: $fill-icons;
   transition: background-color $transition-active;
 
   @include device($tablet) {
@@ -120,7 +117,7 @@
   }
 }
 
-.contacts__address {
+.footer__address {
   padding-bottom: 40px;
   @include device($desktop, false) {
     padding-bottom: 60px;
