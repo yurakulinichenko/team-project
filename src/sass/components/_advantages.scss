@@ -1,21 +1,18 @@
 .advantages {
-  padding-left: 20px;
   padding-top: 60px;
   padding-bottom: 60px;
-  padding-right: 20px;
-  @media screen and (min-width: 768px) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 .advanages__list {
   list-style-type: none;
-  @media screen and (min-width: 768px) {
+
+  @include device($tablet) {
     display: flex;
+    flex-wrap: wrap;
     gap: 4px;
   }
-  @media screen and (min-width: 1200px) {
+
+  @include device($desktop) {
     gap: 80px;
   }
 }
@@ -23,11 +20,13 @@
 .advantages__item {
   margin-bottom: 32px;
   max-width: 230px;
-  @media screen and (min-width: 768px) {
+
+  @include device($tablet) {
     margin-bottom: 0px;
     max-width: 180px;
   }
-  @media screen and (min-width: 1200px) {
+
+  @include device($desktop) {
     max-width: 317px;
   }
 }
@@ -40,15 +39,16 @@
   line-height: 1.14;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #d41443;
+  color: $accent-color;
   margin-bottom: 20px;
-  @media screen and (min-width: 768px) {
+
+  @include device($tablet) {
     margin-bottom: 13px;
     font-size: 48px;
     line-height: 1.15;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include device($desktop) {
     margin-bottom: 16px;
     font-size: 58px;
     line-height: 1.14;
@@ -59,10 +59,12 @@
     display: flex;
     height: 50px;
     margin-bottom: 20px;
-    @media screen and (min-width: 768px) {
+
+    @include device($tablet) {
       margin-bottom: 36px;
     }
-    @media screen and (min-width: 1200px) {
+
+    @include device($desktop) {
       margin-bottom: 40px;
     }
   }
@@ -105,12 +107,12 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 1.7;
-  color: #000000;
-  @media screen and (min-width: 768px) {
+  color: $custome-text;
+  @include device($tablet) {
     font-size: 14px;
     line-height: 1.74;
   }
-  @media screen and (min-width: 1200px) {
+  @include device($desktop) {
     font-size: 16px;
     line-height: 1.76;
   }
