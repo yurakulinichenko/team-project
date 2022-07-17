@@ -1,3 +1,38 @@
+.section__contacts {
+  padding: 30px 20px;
+
+  @include device($tablet) {
+    padding: 40px 20px;
+  }
+
+  @include device($desktop) {
+    padding: 60px 60px;
+  }
+
+  background: linear-gradient(#ffffff 23%, #fff5f6 23% 77%);
+
+  @include device($tablet) {
+    background: linear-gradient(#ffffff 47%, #fff5f6 47% 53%);
+  }
+
+  @include device($desktop) {
+    background: linear-gradient(#ffffff 21%, #fff5f6 21% 79%);
+  }
+}
+
+.container__contacts {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: center;
+
+  @include device($tablet) {
+    padding: 0 16px;
+  }
+}
+
 .contacts {
   max-width: 1200px;
 }
@@ -10,6 +45,7 @@
   @include font-set(16px, 700, 1.31, false, $accent-color);
   font-family: inherit;
   transition: $transition-active;
+  box-shadow: $box-shadow;
 
   width: 161px;
   padding: 11px 15px;
@@ -28,7 +64,7 @@
 
   &:focus,
   &:hover {
-    background: $accent-background;
+    background: #f7154d;
   }
   transition: $transition-active;
 
@@ -215,44 +251,33 @@
   }
 }
 
-
-.container__contacts {
+.locatin-modal {
+  position: fixed;
+  top: 0;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
+  height: 100%;
+  background-color: rgba(212, 20, 67, 0.3);
+  opacity: 1;
 
-  display: flex;
-  justify-content: center;
+  transition: opacity 300ms linear, visibility 300ms linear;
 }
 
-// .container {
-//   width: 100%;
-//   margin: 0 auto;
-//   padding: 0 16px;
+.locatin-modal__map {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 100%;
+  padding: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
 
-//   display: flex;
-//   justify-content: center;
-// }
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms linear;
+}
 
-
-.section__contacts {
-  padding: 30px 20px;
-
-  @include device($tablet) {
-    padding: 40px 20px;
-  }
-
-  @include device($desktop) {
-    padding: 60px 60px;
-  }
-
-  background: linear-gradient(#ffffff 23%, #fff5f6 23% 77%);
-
-  @include device($tablet) {
-    background: linear-gradient(#ffffff 47%, #fff5f6 47% 53%);
-  }
-
-  @include device($desktop) {
-    background: linear-gradient(#ffffff 21%, #fff5f6 21% 79%);
-  }
+.locatin-modal__btn-close {
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
