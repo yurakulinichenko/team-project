@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 8px;
+    @include device(false, $tablet) {
+        width: 100%;
+      }
     @include device($tablet) {
       padding-top: 32px;
     }
@@ -177,6 +180,9 @@
     display: flex;
     overflow: hidden;
     height: 502px;
+    @include device(false, $tablet) {
+        width: 100%;
+      }
     @include device($tablet) {
       height: 416px;
     }
@@ -406,7 +412,7 @@
     z-index: -1;
     width: 346px;
     height: 344px;
-    left: 36px;
+    right:-36px;
     top: 83px;
     border-radius: 50%;
     background-color: $accent-background;
@@ -430,7 +436,7 @@
     width: 171px;
     height: 410px;
     top: 92px;
-    left: 117px;
+    right: 57px;
     @include device($tablet) {
       width: 143px;
       height: 336px;
