@@ -51,3 +51,36 @@
         }
 }
 
+.grid-pading-bottom-2 {
+    padding-bottom: 25px;
+    justify-content: end;
+    margin: 0;
+    @include device(768px) {
+        padding-bottom: 89px;
+        justify-content: end;
+    margin: 0;
+    }
+        @include device(1200px) {
+            padding-bottom: 108px;
+            justify-content: end;
+    margin: 0;
+        }
+}
+
+.grid-pading-bottom-1 {
+    padding-bottom: 14px;
+    justify-content: end;
+    margin: 0;
+
+    @include device(768px) {
+        padding-bottom: 65px;
+        justify-content: end;
+        margin: 0;
+    }
+
+    @include device(1200px) {
+        padding-bottom: 75px;
+        justify-content: end;
+        margin: 0;
+    }
+}
