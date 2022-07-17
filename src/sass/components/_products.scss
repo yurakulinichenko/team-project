@@ -298,7 +298,7 @@
   text-align: center;
   letter-spacing: 0.04em;
   color: #ffffff;
-  margin-bottom: 32px;
+//   margin-bottom: 32px;
 
   @media screen and(min-width: 768px) {
     line-height: 176%;
@@ -310,7 +310,7 @@
 }
 
 .products__btn {
-  bottom: 30px;
+  margin-top: 32px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
