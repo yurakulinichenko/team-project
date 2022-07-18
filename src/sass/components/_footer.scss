@@ -156,3 +156,33 @@
     margin-left: 5px;
   }
 }
+.button-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  background-color: $accent-btn-color;
+  color: $primary-white;
+  border-radius: 5px;
+  opacity: 0.3;
+  transition: opacity $transition-active;
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+  &:hover .button-to-top__icon,
+  &:focus .button-to-top__icon {
+    transform: rotate(-90deg);
+  }
+}
+.button-to-top__icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  fill: $primary-white;
+  transition: transform $transition-active;
+  z-index: 100;
+}
