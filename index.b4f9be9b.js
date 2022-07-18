@@ -1,2 +1,0 @@
-!function(){var e=!0,r=".advantages";jQuery(window).on("scroll load resize",(function(){if(!e)return!1;var t=jQuery(window).scrollTop(),o=jQuery(r).offset().top,a=jQuery(window).height(),n=jQuery(document).height(),i=jQuery(r).outerHeight();(t+500>=o||a+t==n||i+o<a)&&(jQuery(document).ready((function(){jQuery(".advantages__characteristic").css("opacity","1"),jQuery(".advantages__characteristic").spincrement({thousandSeparator:"",duration:1200})})),e=!1),console.log("DONE!!!!!")}))}();
-//# sourceMappingURL=index.b4f9be9b.js.map

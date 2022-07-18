@@ -1,2 +1,0 @@
-var e=!0;jQuery(window).on("scroll load resize",(function(){if(!e)return!1;var r=jQuery(window).scrollTop(),a=jQuery(".advantages").offset().top,t=jQuery(window).height(),o=jQuery(document).height(),n=jQuery(".advantages").outerHeight();(r+500>=a||t+r==o||n+a<t)&&(jQuery(document).ready((function(){jQuery(".advantages__characteristic").css("opacity","1"),jQuery(".advantages__characteristic").spincrement({thousandSeparator:"",duration:1200})})),e=!1),console.log("DONE!!!!!")}));
-//# sourceMappingURL=index.40645cb7.js.map
