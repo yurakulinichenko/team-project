@@ -8,8 +8,8 @@
     justify-content: space-between;
     padding-top: 8px;
     @include device(false, $tablet) {
-        width: 100%;
-      }
+      width: 100%;
+    }
     @include device($tablet) {
       padding-top: 32px;
     }
@@ -85,6 +85,9 @@
 
 .mobile-close-btn {
   margin-bottom: 26px;
+}
+.mobile-menu__icon-close {
+  stroke: $primary-white;
 }
 .mobile-open-btn {
   @include device($desktop) {
@@ -181,8 +184,8 @@
     overflow: hidden;
     height: 502px;
     @include device(false, $tablet) {
-        width: 100%;
-      }
+      width: 100%;
+    }
     @include device($tablet) {
       height: 416px;
     }
@@ -400,6 +403,7 @@
     width: 18px;
     height: 18px;
     border-radius: 50%;
+    border: none;
     background-color: $primary-white;
     transition: background-color $transition-active;
     &:hover,
@@ -416,7 +420,7 @@
     z-index: -1;
     width: 346px;
     height: 344px;
-    right:-36px;
+    right: -36px;
     top: 83px;
     border-radius: 50%;
     background-color: $accent-background;
