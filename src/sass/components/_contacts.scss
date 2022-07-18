@@ -1,3 +1,30 @@
+.section__contacts {
+  padding: 30px 20px;
+
+  @include device($tablet) {
+    padding: 40px 20px;
+  }
+
+  @include device($desktop) {
+    padding: 60px 60px;
+  }
+
+  background: linear-gradient(#ffffff 23%, #fff5f6 23% 77%);
+
+  @include device($tablet) {
+    background: linear-gradient(#ffffff 47%, #fff5f6 47% 53%);
+  }
+
+  @include device($desktop) {
+    background: linear-gradient(#ffffff 21%, #fff5f6 21% 79%);
+  }
+}
+
+.container__contacts {
+  display: flex;
+  justify-content: center;
+}
+
 .contacts {
   max-width: 1200px;
 }
@@ -10,6 +37,7 @@
   @include font-set(16px, 700, 1.31, false, $accent-color);
   font-family: inherit;
   transition: $transition-active;
+  box-shadow: $box-shadow;
 
   width: 161px;
   padding: 11px 15px;
@@ -28,7 +56,7 @@
 
   &:focus,
   &:hover {
-    background: $accent-background;
+    background: #f7154d;
   }
   transition: $transition-active;
 
@@ -212,47 +240,5 @@
 
   @include device($tablet) {
     flex-direction: row;
-  }
-}
-
-
-.container__contacts {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
-
-  display: flex;
-  justify-content: center;
-}
-
-// .container {
-//   width: 100%;
-//   margin: 0 auto;
-//   padding: 0 16px;
-
-//   display: flex;
-//   justify-content: center;
-// }
-
-
-.section__contacts {
-  padding: 30px 20px;
-
-  @include device($tablet) {
-    padding: 40px 20px;
-  }
-
-  @include device($desktop) {
-    padding: 60px 60px;
-  }
-
-  background: linear-gradient(#ffffff 23%, #fff5f6 23% 77%);
-
-  @include device($tablet) {
-    background: linear-gradient(#ffffff 47%, #fff5f6 47% 53%);
-  }
-
-  @include device($desktop) {
-    background: linear-gradient(#ffffff 21%, #fff5f6 21% 79%);
   }
 }

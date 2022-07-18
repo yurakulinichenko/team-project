@@ -1,19 +1,40 @@
 .advantages {
+  margin: 0 auto;
+  padding: 0 20px;
+  @include device($mobile) {
+    width: 100%;
+  }
+  @include device($tablet) {
+    width: 100%;
+    padding: 0 32px;
+  }
+  @include device($desktop) {
+    width: 100%;
+    padding: 0 16px;
+  }
   padding-top: 60px;
   padding-bottom: 60px;
+  margin: 0 auto;
   background: $section-secondary-background;
 }
 
 .advanages__list {
   list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 320px;
 
   @include device($tablet) {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+    max-width: 768px;
   }
 
   @include device($desktop) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
     gap: 80px;
   }
 }
@@ -44,8 +65,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $accent-color;
-  margin-bottom: 20px;
-
+  margin-bottom: 20px; 
   @include device($tablet) {
     margin-bottom: 13px;
     font-size: 48px;
@@ -57,6 +77,7 @@
     font-size: 58px;
     line-height: 1.14;
   }
+
 
   &::before {
     content: '';
