@@ -162,11 +162,11 @@
   bottom: 20px;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 11px 15px;
   text-decoration: none;
   background-color: $accent-btn-color;
   color: $primary-white;
-  border-radius: 5px;
+  border-radius: 22px;
   opacity: 0.3;
   transition: opacity $transition-active;
   &:hover,
