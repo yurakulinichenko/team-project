@@ -199,21 +199,19 @@
     padding: 40px;
     display: block;
     text-align: center;
-    min-width:300px ;
-    min-height:400px ;
+    min-width:350px ;
+   
     background-color:#FFF5F6 ;
     position: absolute;
-    top:50%;
+    top:60%;
     left:50%;
     transform: translate(-50%, -50%);
     @media screen and (min-width:768px){
-        min-width:450px ;
-        min-height:609px ;  
+        min-width:450px ;  
     }
     
     @media screen and (min-width:1200px) {
-        min-width:528px ;
-        min-height:581px ;
+        min-width:500px ;
     }    
 }
 .modal-button{
@@ -221,7 +219,7 @@
     top:10px;
     right: 10px;
     background-color: var(--secondary-background-color);
-    color: rgba(0, 0, 0, 0.1);
+    fill:#292F36;
     width: 30px;
     height: 30px;
     border-radius: 100%;
@@ -249,12 +247,30 @@ text-transform: uppercase;
 line-height: 1.5;
 color: $accent-color;
 margin-bottom: 30px;
+
+@media screen and (min-width:768px){
+    font-size: 24px;  
+}
+
+@media screen and (min-width:1200px) {
+    font-size: 26px;  
+}    
 }
 .modal__text{
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 400;
     font-family: Titan One;
     
     line-height: 1.7;
     color: #292F36;
+
+    @media screen and (min-width:768px){
+        font-size: 22px;
+        line-height: 2;  
+    }
+    
+    @media screen and (min-width:1200px) {
+        font-size: 24px; 
+        line-height:2; 
+    }    
 }
