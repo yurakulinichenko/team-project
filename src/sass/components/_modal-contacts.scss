@@ -1,0 +1,224 @@
+// modal-location
+.backdrop__location {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.modal__location {
+  width: 100%;
+  height: 100%;
+  border: 1px solid $accent-color;
+  background-color: white;
+  padding: 45px 30px;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    border-radius: 10%;
+    margin-left: auto;
+  }
+}
+
+.modal__location__closeButton {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid $accent-color;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Titan One';
+
+  color: $accent-color;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    background-color: $accent-color;
+  }
+}
+
+.modal__location-title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Titan One';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: $accent-color;
+  margin-bottom: 20px;
+}
+
+.location-map {
+  width: 100%;
+  height: 600px;
+}
+
+// modal-franchise
+.backdrop__franchise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.modal__franchise {
+  width: 100%;
+  height: 100%;
+  border: 1px solid $accent-color;
+  background-color: white;
+  padding: 45px 30px;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 700px;
+    border-radius: 10%;
+    margin-left: auto;
+  }
+}
+
+.modal__franchise__closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid $accent-color;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Titan One';
+
+  color: $accent-color;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    background-color: $accent-color;
+  }
+}
+
+.modal__franchise-terms {
+  display: flex;
+  justify-content: center;
+  font-family: 'Titan One';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: $accent-color;
+  margin-bottom: 20px;
+}
+
+.modal__franchise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.modal__franchise-item {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+}
+
+.modal__franchise-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__franchise-text {
+  margin-top: 20px;
+  font-family: 'Titan One';
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: $accent-color;
+}
+
+.modal__franchise-input {
+  border: 1px solid rgba(255, 0, 76, 0.384);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 50%;
+  height: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  cursor: pointer;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  color: $accent-color;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .feedback__block:focus-within > &,
+  .feedback__block:hover > & {
+    border: 1px solid $accent-color;
+  }
+}
