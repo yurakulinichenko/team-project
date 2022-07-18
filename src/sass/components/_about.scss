@@ -193,11 +193,13 @@
   opacity: 0;
   pointer-events: none;
 }
+
 .modal {
   padding: 40px;
   display: block;
   text-align: center;
   min-width: 350px;
+  border-radius: 25px;
 
   background-color: #fff5f6;
   position: absolute;
@@ -211,6 +213,35 @@
   @media screen and (min-width: 1200px) {
     min-width: 500px;
   }
+}
+.modal-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--secondary-background-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border-color: #ffa5ba;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
+  &:hover {
+    fill: $accent-color;
+  }
+  &:focus {
+    fill: $accent-color;
+  }
+}
+.btn__arrow {
+  fill: #292f36;
+}
+
+.modal__container {
+  background-color: $section-background;
+  border-radius: 25px;
 }
 .modal-button {
   position: absolute;
