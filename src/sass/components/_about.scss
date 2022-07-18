@@ -200,6 +200,7 @@
     display: block;
     text-align: center;
     min-width:350px ;
+    border-radius: 25px;
    
     background-color:#FFF5F6 ;
     position: absolute;
@@ -219,7 +220,6 @@
     top:10px;
     right: 10px;
     background-color: var(--secondary-background-color);
-    fill:#292F36;
     width: 30px;
     height: 30px;
     border-radius: 100%;
@@ -235,9 +235,16 @@
 &:focus{
     fill:$accent-color;
 }}
+.btn__arrow{
+    fill: #292F36;
+}
+.fill-good {
+    fill:#292F36;
+}
 
 .modal__container{
     background-color:$section-background;
+    border-radius: 25px;
 }
 .modal__title{
 font-size: 22px;
