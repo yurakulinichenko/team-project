@@ -69,3 +69,18 @@
     font-size: 20px;
   }
 }
+
+.slider-dots {
+  width: 4px;
+  height: 4px;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  border-radius: 50%;
+  list-style: inside;
+  color: #c7133e;
+}
+
+.slider-dots button {
+  display: none;
+}
