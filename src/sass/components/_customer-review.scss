@@ -15,6 +15,10 @@
     margin-bottom: 16px;
   }
 }
+.customer__text::before{
+  background-image: url(../images/markers.png);
+  background-repeat: no-repeat;  
+}
 .customer__text {
   font-family: 'DM Sans';
   font-style: normal;
