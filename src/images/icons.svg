@@ -5,11 +5,7 @@
 </symbol>
 <symbol id="icon-close" viewBox="0 0 32 32">
 
-
-
-<path class="fill-good" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M2.52 2l26.96 28M2 29.48l28-26.96"></path>
-
-
+<path fill="none" stroke="#292F36" style="stroke: var(--color2, #292F36)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M2.52 2l26.96 28M2 29.48l28-26.96"></path>
 
 </symbol>
 <symbol id="icon-facebook" viewBox="0 0 16 32">
