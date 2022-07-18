@@ -28,7 +28,8 @@
   text-align: center;
   color: #000000;
   padding: 43px 58px 26px 65px;
-  background: #fafafa;
+  background:#fafafa;
+  background-image:repeating-linear-gradients(180deg,transparent,transparent 30px, #E1E1E1 31px);
   margin-bottom: 36px;
 }
 @media screen and (min-width: 768px) {
