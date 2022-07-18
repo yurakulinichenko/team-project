@@ -9,8 +9,8 @@ jQuery(window).on("scroll load resize", function () {
     var e_height = jQuery(countbox).outerHeight();
     if (w_top + 500 >= e_top ||  w_height + w_top == d_height || e_height + e_top < w_height) {
         jQuery(document).ready(function () {
-            jQuery('.advantages__characteristic').css('opacity', '1');
-            jQuery('.advantages__characteristic').spincrement({
+            jQuery('.advantages__num').css('opacity', '1');
+            jQuery('.advantages__num').spincrement({
                 thousandSeparator: "",
                 duration: 1200
             });
