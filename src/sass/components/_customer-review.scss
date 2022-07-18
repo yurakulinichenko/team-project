@@ -1,3 +1,20 @@
+.customer {
+  width: 968px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (max-width: 1200px) {
+    width: 620px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 280px;
+  }
+}
+
 .customer__img {
   display: flex;
   margin-top: 0;
