@@ -1,6 +1,7 @@
 .advantages {
   padding-top: 60px;
   padding-bottom: 60px;
+  background: $section-secondary-background;
 }
 
 .advanages__list {
@@ -20,14 +21,17 @@
 .advantages__item {
   margin-bottom: 32px;
   max-width: 230px;
+  flex: 1 1 100%;
 
   @include device($tablet) {
     margin-bottom: 0px;
     max-width: 180px;
+    flex-basis: calc((100% / 3) - 8px);
   }
 
   @include device($desktop) {
     max-width: 317px;
+    flex-basis: calc((100% / 3) - 160px);
   }
 }
 
