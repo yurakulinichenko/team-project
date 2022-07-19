@@ -1,35 +1,33 @@
-.products {
+.products-section {
   display: block;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   padding-left: 20px;
   padding-right: 20px;
 
-  @media screen and (min-width: 768px) {
+  @include device($tablet) {
     margin-bottom: 56px;
     padding-left: 32px;
     padding-right: 32px;
   }
-
-  @media screen and (min-width: 1200px) {
+ @include device($desktop) {
     margin-top: 61px;
     padding-left: 16px;
     padding-right: 16px;
   }
 }
+
 .container__products {
   margin-left: auto;
   margin-right: auto;
 }
+
 .products__lable {
   font-family: Titan One;
   font-style: normal;
-  font-weight: 400;
+  @include font-set(18px, 400, 1.13, false, $section-background);
   text-align: center;
   text-transform: uppercase;
-  color: #ffa5ba;
-  font-size: 18px;
-  line-height: 1.13;
   margin-bottom: 15px;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -38,38 +36,36 @@
     margin-bottom: 18px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include device($desktop) {
     margin-bottom: 16px;
     font-size: 30px;
     line-height: 1.13;
     letter-spacing: 0.04em;
   }
 }
+
 .products__title {
   font-family: Titan One;
   font-style: normal;
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 1.15;
+  @include font-set(34px, 400, 1.15, 0.04em, $accent-color);
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #d41443;
   margin-bottom: 148px;
-
-  @media screen and(min-width: 768px) {
+ 
+  @include device($tablet) {
     font-size: 48px;
     line-height: 1.15;
     margin-bottom: 158px;
   }
 
-  @media screen and(min-width: 1200px) {
+  @include device($desktop) {
     font-size: 58px;
     line-height: 1.14;
     letter-spacing: 0.06em;
     margin-bottom: 281px;
   }
 }
+
 .products__list {
   display: block;
   width: 100%;
@@ -77,15 +73,29 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and(min-width: 768px) {
+  @include device($tablet) {
     display: flex;
   }
 }
+
 .products__list-item {
-  // position: relative;
+  position: relative;
   padding-bottom: 40px;
   text-align: center;
   border-radius: 24px;
+  animation: fade-top-to-botton 1s;
+
+  @keyframes fade-top-to-botton {
+    from {
+      transform: translateY(-250px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
   @media screen and(min-width: 320px) and (max-width: 767px) {
     padding-top: 160px;
@@ -102,7 +112,7 @@
     }
   }
 
-  @media screen and(min-width: 768px) {
+  @include device($tablet) {
     min-height: 473px;
     padding-top: 118px;
     width: 224px;
@@ -114,7 +124,8 @@
       margin-right: 0;
     }
   }
-  @media screen and(min-width: 1200px) {
+
+  @include device($desktop) {
     min-height: 535px;
     padding-bottom: 60px;
     padding-top: 165px;
@@ -128,12 +139,15 @@
     }
   }
 }
+
 .icecream-card {
-  background-color: #ffb8ca;
+  background-color: $section-background;
 }
+
 .icecoffee-card {
   background-color: #f0d1a5;
 }
+
 .milk-card {
   background-color: #c2e297;
 }
@@ -145,21 +159,22 @@
   height: 280px;
   width: 280px;
   margin-bottom: 20px;
-  transform: translate(-15%, -108%);
+  transform: translate(-14%, -108%);
 
-  @media screen and (min-width: 768px) {
+  @include device($tablet) {
     height: 224px;
     width: 224px;
     margin-bottom: 32px;
     transform: translate(-14%, -112%);
   }
 
-  @media screen and (min-width: 1200px) {
+  @include device($desktop) {
     height: 394px;
     width: 368px;
     transform: translate(-17%, -112%);
   }
 }
+
 .icecream-card::before {
   background-image: url(../images/products-1-mobile.png);
   background-repeat: no-repeat;
@@ -234,7 +249,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+ @include device($desktop) {
   .icecream-card::before {
     background-image: url(../images/products-1.png);
     background-repeat: no-repeat;
@@ -275,69 +290,117 @@
 .products__subtitle {
   font-family: Titan One;
   font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font-set(20px, 400, 1.15, 0.04em, $primary-white);
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #ffffff;
   margin-bottom: 70px;
 
-  @media screen and(min-width: 1200px) {
+  @include device($desktop) {
     font-size: 30px;
     line-height: 1.13;
   }
 }
+
 .products__text {
   font-family: 'DM Sans';
   font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 152%;
+  @include font-set(14px, 700, 152%, 0.04em, $primary-white);
   text-align: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-//   margin-bottom: 32px;
 
-  @media screen and(min-width: 768px) {
+
+  @include device($tablet) {
     line-height: 176%;
   }
-  @media screen and(min-width: 1200px) {
+
+  @include device($desktop) {
     font-size: 16px;
     margin-bottom: 60px;
   }
 }
 
 .products__btn {
-  margin-top: 32px;
+  position: absolute;
+  bottom: 40px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border: unset;
-  background-color: #ffffff;
+  background-color: $primary-white;
   cursor: pointer;
+  transform: translateX(-50%);
+  transition: transform $transition-active;
+
+  @include device($desktop){
+    bottom: 60px;
+  }
+
+  &.products__btn-close {
+    transform: rotate(-90deg);
+  }
 }
 
 .products__icon {
-  fill: #d41443;
+  fill: $accent-color;
 }
+
 .products__subtitle::after {
-        content: "";
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 26px;
-        height: 6px;
-        margin-top: 32px;
-        margin-left: 83px;
-        background-image: url(../images/menu-products.png);
-        @media screen and(min-width: 768px) {
-            margin-left: 67px;
-        }
-        
-        @media screen and(min-width: 1200px) {
-         margin-left: 107px;
-        }
+  content: '';
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 26px;
+  height: 6px;
+  margin-top: 32px;
+  margin-left: 83px;
+  background-image: url(../images/menu-products.png);
+
+
+  @include device($tablet) {
+
+    margin-left: 67px;
+  }
+
+  @include device($desktop) {
+    margin-left: 107px;
+  }
+}
+
+.products__overlay {
+  position: relative;
+  display: block;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  border-radius: 24px;
+  width: 100%;
+  height: 75%;
+  font-family: 'DM Sans';
+  @include font-set(14px, 700, 1.15, 0.04em, $primary-white);
+  font-style: normal;
+  top: 25%;
+  left: 0;
+  position: absolute;
+  transition: $transition-active;
+
+  @include device($tablet) {
+    line-height: 176%;
+  }
+
+  @include device($desktop) {
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+}
+
+.products__overlay--icecream {
+  background-color: #ffa5bc;
+}
+
+.products__overlay--coffee {
+  background-color: #f0bd77;
+}
+
+.products__overlay--milk {
+  background-color: #acc58c;
 }

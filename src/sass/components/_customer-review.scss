@@ -1,3 +1,20 @@
+.customer {
+  width: 968px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (max-width: 1200px) {
+    width: 620px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 280px;
+  }
+}
+
 .customer__img {
   display: flex;
   margin-top: 0;
@@ -15,6 +32,10 @@
     margin-bottom: 16px;
   }
 }
+.customer__text::before {
+  background-image: url(../images/markers.png);
+  background-repeat: no-repeat;
+}
 .customer__text {
   font-family: 'DM Sans';
   font-style: normal;
@@ -25,6 +46,12 @@
   color: #000000;
   padding: 43px 58px 26px 65px;
   background: #fafafa;
+  background-image: repeating-linear-gradients(
+    180deg,
+    transparent,
+    transparent 30px,
+    #e1e1e1 31px
+  );
   margin-bottom: 36px;
 }
 @media screen and (min-width: 768px) {
@@ -71,16 +98,19 @@
 }
 
 .slider-dots {
-  width: 4px;
-  height: 4px;
   display: flex;
-  justify-content: center;
+
+  justify-content: space-evenly;
   margin: 10px auto;
-  border-radius: 50%;
-  list-style: inside;
-  color: #c7133e;
+
+  list-style-image: url(../images/Ellipse\ 7.png);
 }
 
 .slider-dots button {
   display: none;
+}
+
+.slick-active {
+  color: #ffffff;
+  list-style-image: url(../images/Vector.png);
 }
