@@ -7,5 +7,4 @@ $jq(document).ready(function () {
     dots: true,
     dotsClass: 'slider-dots',
   });
-  document.getElementsByClassName('slick-active').style.color = 'blue';
 });
