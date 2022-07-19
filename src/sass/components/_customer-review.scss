@@ -99,18 +99,50 @@
 
 .slider-dots {
   display: flex;
-
-  justify-content: space-evenly;
-  margin: 10px auto;
-
+  text-align: center;
+  justify-content: center;
+  margin-top: 33px;
+  list-style: inside;
+  cursor: pointer;
   list-style-image: url(../images/Ellipse\ 7.png);
 }
 
 .slider-dots button {
-  display: none;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slider-dots li {
+  position: relative;
+}
+
+.slider-dots li:not(:last-child) {
+  margin-right: 18px;
+}
+
+.slider-dots li button::before {
+  content: ' ';
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  left: 50%;
+  top: -90px;
+  background-color: #c7133e;
 }
 
 .slick-active {
-  color: #ffffff;
   list-style-image: url(../images/Vector.png);
 }
