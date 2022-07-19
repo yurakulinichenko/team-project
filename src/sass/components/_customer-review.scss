@@ -32,10 +32,7 @@
     margin-bottom: 16px;
   }
 }
-.customer__text::before {
-  background-image: url(../images/markers.png);
-  background-repeat: no-repeat;
-}
+
 .customer__text {
   font-family: 'DM Sans';
   font-style: normal;
@@ -46,12 +43,8 @@
   color: #000000;
   padding: 43px 58px 26px 65px;
   background: #fafafa;
-  background-image: repeating-linear-gradients(
-    180deg,
-    transparent,
-    transparent 30px,
-    #e1e1e1 31px
-  );
+  background-image: url(../images/markers.png); 
+  background-image: linear-gradient(to bottom, #fff5f6 30%, #ffffff 30%);
   margin-bottom: 36px;
 }
 @media screen and (min-width: 768px) {
