@@ -8,8 +8,8 @@
     justify-content: space-between;
     padding-top: 8px;
     @include device(false, $tablet) {
-        width: 100%;
-      }
+      width: 100%;
+    }
     @include device($tablet) {
       padding-top: 32px;
     }
@@ -85,6 +85,9 @@
 
 .mobile-close-btn {
   margin-bottom: 26px;
+}
+.mobile-menu__icon-close {
+  stroke: $primary-white;
 }
 .mobile-open-btn {
   @include device($desktop) {
@@ -181,8 +184,8 @@
     overflow: hidden;
     height: 502px;
     @include device(false, $tablet) {
-        width: 100%;
-      }
+      width: 100%;
+    }
     @include device($tablet) {
       height: 416px;
     }
@@ -400,6 +403,7 @@
     width: 18px;
     height: 18px;
     border-radius: 50%;
+    border: none;
     background-color: $primary-white;
     transition: background-color $transition-active;
     &:hover,
@@ -416,10 +420,13 @@
     z-index: -1;
     width: 346px;
     height: 344px;
-    right:-36px;
+    right: -36px;
     top: 83px;
     border-radius: 50%;
     background-color: $accent-background;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation: zoomIn 1s, circling 20s linear 1s infinite;
     @include device($tablet) {
       width: 335px;
       height: 333px;
@@ -441,6 +448,10 @@
     height: 410px;
     top: 92px;
     right: 57px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation: fadeInUp 1s, pulsation 4s linear 1s infinite;
+
     @include device($tablet) {
       width: 143px;
       height: 336px;
@@ -480,5 +491,108 @@
   fill: $accent-color;
   @include device($tablet) {
     display: block;
+  }
+}
+
+@keyframes pulsation {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circling {
+  0% {
+    transform: rotate(0deg) translatex(0) rotate(0deg);
+  }
+  12.5% {
+    transform: rotate(45deg) translatex(45px) rotate(-45deg);
+  }
+  25% {
+    transform: rotate(90deg) translatex(0) rotate(-90deg);
+  }
+  37.5% {
+    transform: rotate(135deg) translatex(-45px) rotate(-135deg);
+  }
+  50% {
+    transform: rotate(180deg) translatex(0) rotate(-180deg);
+  }
+  62.5% {
+    transform: rotate(225deg) translatex(45px) rotate(-225deg);
+  }
+  75% {
+    transform: rotate(270deg) translatex(0) rotate(-270deg);
+  }
+  87.5% {
+    transform: rotate(315deg) translatex(-45px) rotate(-315deg);
+  }
+  100% {
+    transform: rotate(360deg) translatex(0) rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
