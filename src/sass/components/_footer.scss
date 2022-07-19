@@ -1,5 +1,10 @@
 .footer {
   background-color: $section-secondary-background;
+  padding-top: 20px;
+  padding-bottom: 8px;
+  @include device($desktop) {
+    padding-top: 60px;
+  }
 }
 .footer__container {
   @include device($tablet) {
@@ -40,7 +45,6 @@
   @include device($desktop) {
     @include font-set(30px, false, calc(34 / 30), 0.04em, false);
     margin-bottom: 16px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 }
 
@@ -52,7 +56,6 @@
   }
   @include device($desktop) {
     @include font-set(58px, false, calc(66 / 58), 0.06em, false);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 }
 
@@ -118,9 +121,9 @@
 }
 
 .footer__address {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
   @include device($desktop, false) {
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
 }
 
@@ -138,17 +141,13 @@
 
 .copy {
   border-top: 1px solid $border-primary-color;
-  padding: 15px 20px 3px;
+  padding: 15px 20px 0px;
   text-align: center;
   @include font-set(14px, 700, 152%, false, $contacts-color);
 
   @include device($tablet, false) {
     display: flex;
     justify-content: center;
-    padding-bottom: 8px;
-  }
-  @include device($desktop, false) {
-    padding-bottom: 4px;
   }
 }
 .copy__item + .copy__item {
