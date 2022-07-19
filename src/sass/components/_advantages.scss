@@ -65,7 +65,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $accent-color;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   @include device($tablet) {
     margin-bottom: 13px;
     font-size: 48px;
@@ -77,7 +77,6 @@
     font-size: 58px;
     line-height: 1.14;
   }
-
 
   &::before {
     content: '';

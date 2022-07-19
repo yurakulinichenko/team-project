@@ -181,8 +181,8 @@
   background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
     background-image: url(../images/products-1-mobile@2x.png);
   }
 }
@@ -193,8 +193,8 @@
   background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
     background-image: url(../images/products-2-mobile@2x.png);
   }
 }
@@ -205,8 +205,8 @@
   background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
     background-image: url(../images/products-3-mobile@2x.png);
   }
 }
@@ -218,8 +218,8 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-1-tablet@2x.png);
     }
   }
@@ -230,8 +230,8 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-2-tablet@2x.png);
     }
   }
@@ -242,8 +242,8 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-3-tablet@2x.png);
     }
   }
@@ -256,8 +256,8 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-1@2x.png);
     }
   }
@@ -268,8 +268,8 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-2@2x.png);
     }
   }
@@ -280,8 +280,8 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-3@2x.png);
     }
   }
@@ -306,6 +306,7 @@
   font-style: normal;
   @include font-set(14px, 700, 152%, 0.04em, $primary-white);
   text-align: center;
+
 
   @include device($tablet) {
     line-height: 176%;
@@ -354,7 +355,9 @@
   margin-left: 83px;
   background-image: url(../images/menu-products.png);
 
+
   @include device($tablet) {
+
     margin-left: 67px;
   }
 
