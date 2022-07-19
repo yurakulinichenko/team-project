@@ -103,12 +103,19 @@
 .slick-next.slick-arrow {
   right: 0;
 }
-.slick-dots {
+.slider-dots {
+  width: 4px;
+  height: 4px;
   display: flex;
   justify-content: center;
-  font-size: 0;
+  margin: 10px auto;
   border-radius: 50%;
+  list-style-image: url(../../images/Ellipse\ 7.png);
   color: #c7133e;
+}
+
+.slider-dots button {
+  display: none;
 }
 
 .slick-active {
