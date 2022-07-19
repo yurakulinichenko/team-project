@@ -1,6 +1,5 @@
 .footer {
   background-color: $section-secondary-background;
-  outline: 1px solid red;
   padding-top: 20px;
   padding-bottom: 8px;
   @include device($desktop) {
