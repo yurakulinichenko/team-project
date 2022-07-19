@@ -333,8 +333,9 @@
     bottom: 60px;
   }
 
-  &.products__btn-close {
-    transform: rotate(-90deg);
+  &:hover,
+  &:focus {
+    background-color: $second-btn-color;
   }
 }
 
@@ -400,4 +401,18 @@
 
 .products__overlay--milk {
   background-color: #acc58c;
+}
+
+.products__btn-close {
+  transform: rotate(-90deg);
+  bottom: 40px;
+  left: 43%;
+
+  @include device($tablet) {
+    left: 40%;
+  }
+  @include device($desktop) {
+      bottom: 60px;
+      left: 45%;
+    }
 }
