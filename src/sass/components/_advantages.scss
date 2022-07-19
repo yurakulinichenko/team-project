@@ -19,6 +19,10 @@
 }
 
 .advanages__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   list-style-type: none;
   margin-left: auto;
   margin-right: auto;
@@ -26,6 +30,9 @@
 
   @include device($tablet) {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
     flex-wrap: wrap;
     gap: 4px;
     max-width: 768px;
