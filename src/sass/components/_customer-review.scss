@@ -32,9 +32,9 @@
     margin-bottom: 16px;
   }
 }
-.customer__text::before{
+.customer__text::before {
   background-image: url(../images/markers.png);
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
 }
 .customer__text {
   font-family: 'DM Sans';
@@ -45,8 +45,13 @@
   text-align: center;
   color: #000000;
   padding: 43px 58px 26px 65px;
-  background:#fafafa;
-  background-image:repeating-linear-gradients(180deg,transparent,transparent 30px, #E1E1E1 31px);
+  background: #fafafa;
+  background-image: repeating-linear-gradients(
+    180deg,
+    transparent,
+    transparent 30px,
+    #e1e1e1 31px
+  );
   margin-bottom: 36px;
 }
 @media screen and (min-width: 768px) {
@@ -92,21 +97,20 @@
   }
 }
 
-.slick-prev.slick-arrow{
+.slick-prev.slick-arrow {
   left: 0;
 }
-.slick-next.slick-arrow{
+.slick-next.slick-arrow {
   right: 0;
 }
-.slick-dots{
+.slick-dots {
   display: flex;
   justify-content: center;
   font-size: 0;
   border-radius: 50%;
-  color:#C7133E;
-
+  color: #c7133e;
+}
 
 .slick-active {
   color: #ffffff;
-
 }
