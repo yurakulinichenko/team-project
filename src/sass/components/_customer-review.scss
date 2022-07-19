@@ -97,21 +97,17 @@
   }
 }
 
-.slick-prev.slick-arrow {
-  left: 0;
-}
-.slick-next.slick-arrow {
-  right: 0;
-}
 .slider-dots {
-  width: 4px;
-  height: 4px;
+  // width: 4px;
+  // height: 4px;
+  // text-align: center;
   display: flex;
-  justify-content: center;
+  // flex-direction: column;
+  justify-content: space-around;
   margin: 10px auto;
-  border-radius: 50%;
+  // border-radius: 50%;
   list-style-image: url(../images/Ellipse\ 7.png);
-  color: #c7133e;
+  // color: #c7133e;
 }
 
 .slider-dots button {
@@ -120,4 +116,5 @@
 
 .slick-active {
   color: #ffffff;
+  list-style-image: url(../images/Vector.png);
 }
