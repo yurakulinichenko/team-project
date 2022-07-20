@@ -1,4 +1,4 @@
-.customer {
+.customer-review {
   width: 968px;
   margin: 0 auto;
   padding-top: 60px;
@@ -55,12 +55,6 @@
   color: #000000;
   padding: 43px 58px 26px 65px;
   background: #fafafa;
-  background-image: repeating-linear-gradients(
-    180deg,
-    transparent,
-    transparent 30px,
-    #e1e1e1 31px
-  );
   margin-bottom: 36px;
 }
 @media screen and (min-width: 768px) {
