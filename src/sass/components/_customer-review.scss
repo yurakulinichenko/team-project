@@ -37,12 +37,22 @@
   position: absolute;
   background-image: url(../images/markers.png);
   display: inline-block;
-  left: 75px;
-  top: 30px;
+  left: 72px;
+  top: 32px;
   width: 54px;
   height: 40px;
   background-repeat: no-repeat;
   opacity: 0.5;
+
+  @media screen and (max-width: 1200px) {
+    left: 6px;
+    top: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    top: 30px;
+    left: 53px;
+  }
 }
 .customer__text {
   position: relative;
