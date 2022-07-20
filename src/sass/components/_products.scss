@@ -10,7 +10,7 @@
     padding-left: 32px;
     padding-right: 32px;
   }
- @include device($desktop) {
+  @include device($desktop) {
     padding-top: 61px;
     padding-left: 16px;
     padding-right: 16px;
@@ -51,7 +51,7 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 148px;
- 
+
   @include device($tablet) {
     font-size: 48px;
     line-height: 1.15;
@@ -249,7 +249,7 @@
   }
 }
 
- @include device($desktop) {
+@include device($desktop) {
   .icecream-card::before {
     background-image: url(../images/products-1.png);
     background-repeat: no-repeat;
@@ -307,7 +307,6 @@
   @include font-set(14px, 700, 152%, 0.04em, $primary-white);
   text-align: center;
 
-
   @include device($tablet) {
     line-height: 176%;
   }
@@ -330,7 +329,7 @@
   transform: translateX(-50%);
   transition: transform $transition-active;
 
-  @include device($desktop){
+  @include device($desktop) {
     bottom: 60px;
   }
 
@@ -356,9 +355,7 @@
   margin-left: 83px;
   background-image: url(../images/menu-products.png);
 
-
   @include device($tablet) {
-
     margin-left: 67px;
   }
 
@@ -406,7 +403,6 @@
   background-color: #acc58c;
 }
 
-
 .products__btn-close {
   transform: rotate(-90deg);
   bottom: 40px;
@@ -416,8 +412,7 @@
     left: 40%;
   }
   @include device($desktop) {
-      bottom: 60px;
-      left: 45%;
-    }
+    bottom: 60px;
+    left: 45%;
+  }
 }
-
