@@ -8,19 +8,25 @@
         <picture>
           <source
             media="(min-width:1200px)"
-            srcset="./images/about.png, ./images/about@2x.png"
+            srcset="./images/about.png 1x, ./images/about@2x.png 2x"
             type="image/png"
           />
 
           <source
             media="(min-width:768px)"
-            srcset="./images/about-tablet.png, ./images/about-tablet@2x.png"
+            srcset="
+              ./images/about-tablet.png    1x,
+              ./images/about-tablet@2x.png 2x
+            "
             type="image/png"
           />
 
           <source
             media="(max-width:767px)"
-            srcset="./images/about-mobile.png, ./images/about-mobile@2x.png"
+            srcset="
+              ./images/about-mobile.png    1x,
+              ./images/about-mobile@2x.png 2x
+            "
             type="image/png"
           />
 
