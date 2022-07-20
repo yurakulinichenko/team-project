@@ -92,18 +92,17 @@
     margin-bottom: 36px;
   }
 }
-.customer__text-wrap {
+.customer__text-gradient {
   position: absolute;
   width: 180px;
   height: 217px;
   top: 0;
   background-image: repeating-linear-gradient(
-    180deg,
     transparent,
     transparent 30px,
     #e1e1e1 31px
   );
-  transform: translate(30%, 72%);
+  transform: translate(30%, 85%);
   @media screen and (min-width: 768px) {
     width: 608px;
     height: 108px;
@@ -114,7 +113,7 @@
     width: 822px;
     height: 75px;
 
-    transform: translate(10%, 200%);
+    transform: translate(7%, 200%);
   }
 }
 
