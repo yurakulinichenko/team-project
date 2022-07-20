@@ -4,13 +4,13 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     width: 620px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     width: 280px;
   }
 }
@@ -37,25 +37,23 @@
   background-repeat: no-repeat;
 }
 .customer__text {
+  position: relative;
+  min-width: 157px;
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.7;
+  line-height: 2.55;
   text-align: center;
   color: #000000;
   padding: 43px 58px 26px 65px;
   background: #fafafa;
-  background-image: repeating-linear-gradients(
-    180deg,
-    transparent,
-    transparent 30px,
-    #e1e1e1 31px
-  );
+
   margin-bottom: 36px;
 }
 @media screen and (min-width: 768px) {
   .customer__text {
+    background-color: transparent;
     font-size: 14px;
     line-height: 2.16;
     text-align: center;
@@ -66,12 +64,39 @@
 }
 @media screen and (min-width: 1200px) {
   .customer__text {
+    background: #fafafa;
+
     font-size: 16px;
     line-height: 1.86;
     text-align: center;
     letter-spacing: 0.04em;
     padding: 47px 109px 39px 109px;
     margin-bottom: 36px;
+  }
+}
+.customer__text-wrap {
+  position: absolute;
+  width: 180px;
+  height: 217px;
+  top: 0;
+  background-image: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 30px,
+    #e1e1e1 31px
+  );
+  transform: translate(30%, 72%);
+  @media screen and (min-width: 768px) {
+    width: 608px;
+    height: 108px;
+
+    transform: translate(0%, 130%);
+  }
+  @media screen and (min-width: 1200px) {
+    width: 822px;
+    height: 75px;
+
+    transform: translate(10%, 200%);
   }
 }
 
