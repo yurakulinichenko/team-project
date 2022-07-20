@@ -1,4 +1,4 @@
-.customer {
+.customer-review {
   width: 968px;
   margin: 0 auto;
   padding-top: 60px;
@@ -33,12 +33,31 @@
   }
 }
 .customer__text::before {
+  content: '';
+  position: absolute;
   background-image: url(../images/markers.png);
+  display: inline-block;
+  left: 72px;
+  top: 32px;
+  width: 54px;
+  height: 40px;
   background-repeat: no-repeat;
+  opacity: 0.5;
+
+  @media screen and (max-width: 1199px) {
+    left: 6px;
+    top: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    top: 30px;
+    left: 53px;
+  }
 }
 .customer__text {
   position: relative;
   min-width: 157px;
+
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
@@ -48,7 +67,6 @@
   color: #000000;
   padding: 43px 58px 26px 65px;
   background: #fafafa;
-
   margin-bottom: 36px;
 }
 @media screen and (min-width: 768px) {
