@@ -4,13 +4,13 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     width: 620px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     width: 280px;
   }
 }
@@ -44,12 +44,12 @@
   background-repeat: no-repeat;
   opacity: 0.5;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     left: 6px;
     top: 20px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     top: 30px;
     left: 53px;
   }
