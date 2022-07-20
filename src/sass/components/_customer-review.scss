@@ -33,6 +33,18 @@
   }
 }
 
+.customer__text::before{
+  content: '';
+  background-image: url("../images/markers.png");  
+  display: inline-block;
+  width: 54px;
+  height: 40px;
+  transition: ;
+}
+@media screen and (min-width: 768px) and (max-width: 1999px){ 
+.customer__text::before{
+  width: 60.35px;}
+}
 .customer__text {
   font-family: 'DM Sans';
   font-style: normal;
@@ -42,8 +54,7 @@
   text-align: center;
   color: #000000;
   padding: 43px 58px 26px 65px;
-  background: #fafafa;
-  background-image: url(../images/markers.png); 
+  background: #fafafa;   
   background-image: linear-gradient(to bottom, #fff5f6 30%, #ffffff 30%);
   margin-bottom: 36px;
 }
