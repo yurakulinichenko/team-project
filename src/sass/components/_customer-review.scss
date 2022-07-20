@@ -33,10 +33,19 @@
   }
 }
 .customer__text::before {
+  content: '';
+  position: absolute;
   background-image: url(../images/markers.png);
+  display: inline-block;
+  left: 75px;
+  top: 30px;
+  width: 54px;
+  height: 40px;
   background-repeat: no-repeat;
+  opacity: 0.5;
 }
 .customer__text {
+  position: relative;
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
