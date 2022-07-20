@@ -85,11 +85,21 @@
 
 .mobile-close-btn {
   margin-bottom: 26px;
-}
-.mobile-menu__icon-close {
+  stroke-width: 2px;
   stroke: $primary-white;
+  &:hover,
+  &:focus {
+    stroke: $accent-color;
+  }
 }
+
 .mobile-open-btn {
+  stroke-width: 2px;
+  stroke: $accent-color;
+  &:hover,
+  &:focus {
+    stroke: $primary-white;
+  }
   @include device($desktop) {
     display: none;
   }

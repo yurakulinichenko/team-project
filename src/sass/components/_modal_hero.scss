@@ -3,10 +3,10 @@
   @include device($tablet) {
     display: block;
     position: fixed;
+    top: 0;
     width: 100%;
     min-height: 100%;
 
-    top: 0;
     transition: opacity $transition-active, visibility $transition-active;
     z-index: 3;
     background-color: rgba(0, 0, 0, 0.25);
@@ -19,8 +19,8 @@
 .modal-hero {
   position: absolute;
   width: 350px;
-  min-height: 400px;
-  background-color: #fff5f6;
+  min-height: 350px;
+  background-color: $section-secondary-background;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -37,27 +37,44 @@
   }
 
   &__close-btn {
-    margin-bottom: 26px;
+    margin-bottom: 10px;
     margin-left: auto;
     display: block;
     border: none;
     background-color: transparent;
     padding: 0;
-  }
-  &__icon {
-    stroke: $accent-color;
+    cursor: pointer;
+    stroke-width: 3px;
+    stroke: $contacts-color;
+    transition: stroke $transition-active;
+    &:hover,
+    &:focus {
+      stroke: $accent-color;
+    }
   }
 
   &__title {
     font-family: 'Titan One';
-    @include font-set(30px, 400, 1.13, 0.04em, $accent-color);
+    @include font-set(22px, 400, 1.13, 0.04em, $accent-color);
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    @include device($tablet) {
+      font-size: 26px;
+    }
+    @include device($desktop) {
+      font-size: 30px;
+    }
   }
 
   &__text {
     @include font-set(16px, 700, 1.76, 0.04em, $contacts-color);
     text-align: center;
+    @include device($tablet) {
+      font-size: 18px;
+    }
+    @include device($desktop) {
+      font-size: 20px;
+    }
   }
 }

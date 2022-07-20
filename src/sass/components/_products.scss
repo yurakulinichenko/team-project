@@ -7,7 +7,7 @@
     padding-bottom: 56px;
 
   }
- @include device($desktop) {
+  @include device($desktop) {
     padding-top: 61px;
   
   }
@@ -47,7 +47,7 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 148px;
- 
+
   @include device($tablet) {
     font-size: 48px;
     line-height: 1.15;
@@ -194,8 +194,8 @@
   background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
     background-image: url(../images/products-1-mobile@2x.png);
   }
 }
@@ -206,8 +206,8 @@
   background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
     background-image: url(../images/products-2-mobile@2x.png);
   }
 }
@@ -218,8 +218,8 @@
   background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
     background-image: url(../images/products-3-mobile@2x.png);
   }
 }
@@ -231,8 +231,8 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-1-tablet@2x.png);
     }
   }
@@ -243,8 +243,8 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-2-tablet@2x.png);
     }
   }
@@ -255,22 +255,22 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-3-tablet@2x.png);
     }
   }
 }
 
- @include device($desktop) {
+@include device($desktop) {
   .icecream-card::before {
     background-image: url(../images/products-1.png);
     background-repeat: no-repeat;
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-1@2x.png);
     }
   }
@@ -281,8 +281,8 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-2@2x.png);
     }
   }
@@ -293,8 +293,8 @@
     background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/products-3@2x.png);
     }
   }
@@ -342,7 +342,7 @@
   transform: translateX(-50%);
   transition: transform $transition-active;
 
-  @include device($desktop){
+  @include device($desktop) {
     bottom: 60px;
   }
 
@@ -421,6 +421,7 @@
   bottom: 40px;
 
   @include device($desktop) {
+
       bottom: 60px;
     }
 }

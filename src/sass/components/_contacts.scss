@@ -1,12 +1,15 @@
 .section__contacts {
-  padding: 30px 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
 
   @include device($tablet) {
-    padding: 40px 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 
   @include device($desktop) {
-    padding: 60px 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   background: linear-gradient(#ffffff 23%, #fff5f6 23% 77%);
